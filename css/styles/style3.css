@@ -1,0 +1,119 @@
+
+.moduletable_clients h3, div.k2LoginBlock ul li a:hover,.nspLinks ul li h4 a:hover,
+div.k2CategoriesListBlock ul li.activeCategory a,.blog-featured .vt_boxitem ul.info li h3,
+.dropcap,a:link,a:visited,.menu a:hover,#current a,#page .contentheading, div.k2TagCloudBlock a,
+#active_menu,.contentpane_vtem_popup a,a.results, #vt_copyright a:hover, .weblinks a:hover,
+#vt_menu_footer ul li a:hover, #current ul li a:hover, ul.VMmenu li a:hover,
+.mostread li a:hover,.fg-menu li a:hover, .fg-menu li.active a, .fg-menu li.active.parent a,
+.fg-menu li.active.parent li.active.parent a,a.pathway:hover,li.team_last a,
+ul.VMmenu li.VmOpen a,.moduletable a.mainlevel:hover,
+.pagination a, ul li.active a:hover, ul li.active a span:hover, ul .current a span,
+.current ul li a:hover span, .current ul li a span:hover,.categories_list ul li a:hover,
+div.itemTagsBlock ul.itemTags li a:hover, div.k2ItemsBlock ul li a.moduleItemTitle:hover,
+div.userItemTagsBlock ul.userItemTags li a:hover,
+div.itemExtraFields h3, div.catItemExtraFields h4, div.genericItemExtraFields h4,
+.vt_moduletable.NewsTop .nspArt h4.nspHeader a:hover,
+.items-row .item h2 a, .contentheading a, .contentheading a,
+.vt_moduletable.our_tools .nspMain .nspArtPage .nspArt h4.nspHeader a,
+.vt_moduletable.upcoming_events .nspArt p.nspInfo,.nspLinks ul li h4 a,
+#vtem_menu ul.menu_vtem_nav li.current a, #vtem_menu ul.menu_vtem_nav li.active a,
+#vt_footer ul li a:hover,
+.nspArt h4.nspHeader a:hover{color:#dfa430; text-decoration:none;}
+
+
+#vtem_menu ul.menu_vtem_nav > li.active > a:hover > span, 
+#vtem_menu ul.menu_vtem_nav > li.current > a:hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a:hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.current > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.current > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span, 
+#vtem_menu ul.menu_vtem_nav > li.current > a > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span, 
+#vtem_menu ul.menu_vtem_nav > li.current > a > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span,
+#vtem_menu ul.menu_vtem_nav > li > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li > a:hover > span{ border-bottom:5px solid #dfa430; color:#dfa430;}
+
+.vt_wrapper_drawer,
+.we_offer ul li a.Readmore,
+.vt_wrapper_bottom a,
+.pagination strong span,
+.pagination strong a:hover,
+.vt_moduletable.Newsletter input.submit_mail,
+div.k2ItemsBlock ul li a.moduleItemReadMore,
+.vt_box_head .button_round1 a, .readmore a, .nspArtPage a.readon,
+div.k2LoginBlock fieldset.input input.button, 
+div.button_searchb .form_searchb_submit, 
+a.vt_button, .button_round, #finder-search .button,
+table.calendar tr td.calendarNavMonthPrev, 
+table.calendar tr td.calendarNavMonthNext, 
+table.calendar tr td.calendarCurrentMonth,
+div.vt_aside .catItemDateCreated,
+div.vt_aside .tagItemDateCreated,
+div.vt_aside .userItemDateCreated,
+#k2Container div.subCategory a.subCategoryMore:hover,
+table.calendar tr td.calendarTodayLinked,
+table.calendar tr td.calendarTodayLinked a:hover,
+table.calendar tr td.calendarDateLinked a:hover,
+table.calendar tr td.calendarToday,
+table.calendar tr td.calendarToday:hover,
+#vtem_menu ul.menu_vtem_nav li ul li a.hover,
+#vtem_menu ul.menu_vtem_nav li.active ul li a.hover,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent a,
+#vtem_menu ul.menu_vtem_nav li ul li.current.active a,
+#vtem_menu ul.menu_vtem_nav li ul li ul li.active a,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent ul li a:hover,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent ul li.current.active a,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent ul li.current.active a span,
+#vtem_menu ul.menu_vtem_nav li.current.active.parent ul li a.hover span,
+#vtem_menu ul.menu_vtem_nav li.current.active.parent ul li a:hover span,
+#vtem_menu ul.menu_vtem_nav ul li.active a.hover,
+#vtem_menu ul.menu_vtem_nav ul li.active ul li a:hover,
+#vtem_menu ul.menu_vtem_nav ul li.active ul li a.hover,
+#vtem_menu ul.menu_vtem_nav ul li.active ul li a.hover:hover span,
+#vtem_menu ul.menu_vtem_nav li.parent ul li.current ul li a:hover,
+#vtem_menu ul.menu_vtem_dropline li.active a span,
+#vtem_menu ul.menu_vtem_dropline li.vtem_hover a span,
+#vtem_menu ul.menu_vtem_dropline li.active a,
+#vtem_menu ul.menu_vtem_dropline li.vtem_hover a{ background-color:#dfa430 !important; }
+#vtem_menu ul.menu_vtem_dropline li.active ul{background-color:#dfa430 !important; display:block !important;}
+
+div.k2ItemsBlock ul li a.moduleItemReadMore,
+.vt_box_head .button_round1 a, .readmore a, .nspArtPage a.readon,
+.we_offer ul li a.Readmore, .vt_wrapper_bottom a{ border-bottom: 2px solid #b68627;}
+.we_offer ul li.analyze span{ background:url(ana3.png) 46% center no-repeat;}
+.we_offer ul li.strategy span{ background:url(stra3.png) 46% center no-repeat;}
+.we_offer ul li.integrate span{ background:url(inter3.png) 49% center no-repeat;}
+.we_offer ul li.develop span{ background:url(deve3.png) 50% center no-repeat;}
+.we_offer span > em {border-color: transparent  #dfa430 transparent transparent;}
+.we_offer span:hover > em {border-color: #dfa430  #dfa430 transparent transparent;}
+
+
+.box_skitter .info_slide_dots .image_number_select{ background-position:0 -44px !important;}
+.box_skitter .next_button,.box_skitter .prev_button{border:2px solid #dfa430 !important;}
+.box_skitter .prev_button{ background-position:0 -156px !important;}
+.box_skitter .prev_button:hover, .box_skitter .next_button:hover{background-color:#dfa430 !important;}
+.box_skitter .next_button{ background-position:-52px -156px !important;}
+
+.vt_wrapper_utility{
+background: #dfa430; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZGZhNDMwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmJjMTRlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q0OTUxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(-45deg,  #dfa430 0%, #fbc14e 50%, #d49519 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#dfa430), color-stop(50%,#fbc14e), color-stop(100%,#d49519)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #dfa430 0%,#fbc14e 50%,#d49519 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #dfa430 0%,#fbc14e 50%,#d49519 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #dfa430 0%,#fbc14e 50%,#d49519 100%); /* IE10+ */
+background: linear-gradient(135deg,  #dfa430 0%,#fbc14e 50%,#d49519 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfa430', endColorstr='#d49519',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+
+.template-style3 #vt_logo img{ display:none;}
+.template-style3 #vt_logo{background:url(vt_logo_style3.png) left 0 no-repeat;}
+
+
+

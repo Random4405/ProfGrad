@@ -1,0 +1,311 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+.about-profgrad-video {
+  height: 406px;
+  width: 100%;
+}
+
+.moduletable_header_adaptive_contacts, .about-buttons {
+  display: none;
+}
+
+.iko-mobile-table {
+  display: none;
+}
+
+.iko-desktop-table {
+  display: block;
+}
+
+.custom-desktop {
+  display: block;
+}
+
+.custom-mobile {
+  display: none;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+  .about-profgrad-video {
+    height: 330px;
+  }
+
+  .vt_sidebar_section {
+    width: 250px;
+  }
+
+  .ml400 {
+    margin-left: 350px;
+  }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+  .about-profgrad-video {
+    height: 238px;
+  }
+
+  .vt_sidebar_section {
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  .ml400 {
+    margin-left: 225px;
+  }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+  .custom-desktop {
+    display: none;
+  }
+
+  .custom-mobile {
+    display: block;
+  }
+
+  .iko-mobile-table tr td {
+    max-width: 50%;
+  }
+  .iko-mobile-table tr td a img {
+    max-width: 100%;
+  }
+
+  .iko-mobile-table tr td{
+    padding-right: 15px;
+  }
+  .iko-mobile-table tr td + td{
+    padding-right: 0;
+    padding-left: 15px;
+  }
+
+  .iko-h3 {
+    color: #494949;
+    font-family: "Open Sans";
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    line-height: 24px;
+    margin-bottom: 10px !important;
+  }
+
+  .iko-mobile-table tr td p a, .iko-desktop-table tr td p a  {
+    color: #494949;!important;
+    font-family: "Open Sans Condensed" !important;
+    font-size: 17px !important;
+    font-weight: 300 !important;
+    line-height: 16px !important;
+    text-decoration: underline !important;
+    text-align: left !important;
+  }
+
+  .iko-mobile-table tr td p {
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+
+  .iko-mobile-table tr td {
+    margin: 15px;
+  }
+
+  .iko-desktop-table {
+    display: none;
+  }
+
+  .iko-mobile-table {
+    display: block;
+  }
+
+  img.flat {
+    width: 100%;
+  }
+
+  #vt_header_section {
+    padding-bottom: 0;
+  }
+
+  .about-buttons > * {
+    max-width: 350px;
+    margin-bottom: 100px;
+    height: 39px;
+    background-color: #009886;
+    border-radius: 5px;
+    padding-top: 6px;
+    margin: 0 auto;
+  }
+
+  .about-buttons > * > * {
+    color: white !important;
+    font-family: "Open Sans Condensed";
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .about-button-1 {
+    padding-left: calc(50% - 137px) !important;
+  }
+
+  .about-button-2 {
+    padding-left: calc(50% - 84px) !important;
+  }
+
+  .moduletable_header_adaptive_contacts, .about-buttons {
+    display: block;
+  }
+
+  .mr150 {
+    margin-right: 15px;
+  }
+
+  #k2Container .itemTitle {
+    margin-top: 0;
+  }
+
+  body {
+    background-color: #f8f9fb;
+  }
+
+  .about-contacts {
+    border-bottom: 2px solid #e9e8e8;
+    margin: 15px;
+    padding-bottom: 15px;
+  }
+
+  .about-contacts > * {
+    height: 30px;
+  }
+
+  .header-content {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .moduletable_custom_menu .controls__rightt {
+    display: none;
+  }
+  .moduletable_video_bl + .moduletable_custom_menu .controls__right {
+    /*display: block;*/
+  }
+
+  .about-contacts-1,
+  .about-contacts-2,
+  .about-contacts-3,
+  .about-contacts-4 {
+    float: left;
+    width: 50%;
+    font-family: "Open Sans Condensed";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .icon {
+    margin: 0 15px 0 0;
+    float: left;
+    font-size: 0;
+    text-indent: -9999px;
+    vertical-align: top;
+  }
+
+  .icon.icon-mobile {
+    width: 15px;
+    height: 25px;
+    background: url(../images/icon-mobile-dark.png) 0 0 no-repeat;
+  }
+
+  .icon.icon-phone {
+    width: 22px;
+    height: 25px;
+    background: url(../images/icon-phone-dark.png) 0 4px no-repeat;
+  }
+
+  .icon.icon-email {
+    width: 22px;
+    height: 25px;
+    background: url(../images/icon-email-dark.png) 0 7px no-repeat;
+  }
+
+  .vt_sidebar_section {
+    display: none;
+  }
+
+  .ml400 {
+    margin-left: 15px;
+  }
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+  .about-contacts-1, .about-contacts-2, .about-contacts-3, .about-contacts-4 {
+    font-size: 15px;
+  }
+
+  .about-profgrad-video {
+    height: auto;
+    width: 100%;
+  }
+
+  div.itemFullText {
+    max-width: 480px;
+  }
+
+  .qlform_buy input[type="text"], input[type="email"], .moduletable_buy textarea {
+    margin-right: 0 !important;
+  }
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+  .icon {
+
+    margin: 0 7px 0 0;
+  }
+
+  div.itemFullText {
+    max-width: 320px;
+  }
+
+}

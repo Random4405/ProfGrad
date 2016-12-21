@@ -1,0 +1,369 @@
+/* Design by VTEM http://www.vtem.net  All Rights Reserved */
+
+
+
+#vt_body_wrapper{ margin:0; padding:0; min-width:980px;}
+
+#vt_nav_right .vt_module_inside{ margin:0px 0px 0px 20px;}
+
+#vt_nav_left .vt_module_inside{ margin:0px 20px 0px 0px;}
+
+#vt_main_com .vt_component_inside{ padding:0px;}
+
+
+
+#vtem.logo-1 #vt_logo{ background:none !important;}
+
+#vtem.logo-1 #vt_logo{ padding-top:15px;}  
+
+#vtem.logo-1 #vt_logo span{ display:block; float:left; line-height:30px;}  
+
+
+
+.insetmanual1,.insetmanual2{ width:100%; float:left;}
+
+.headermanual2{ float:right;}
+
+.vt_wrapper_drawer{ position:relative; z-index:9999; color:#fff;}
+
+#vt_header{ position:relative; height:80px;}
+
+#vt_header .vt_module_inside{ margin:0px; padding:0px;}
+
+.vt_section{ margin:0 auto; position:relative;}
+
+#vt_top_section{ position:relative; z-index:9999;}
+
+
+
+#vt_drawer{ height:45px;}
+
+#vt_header_section{
+
+z-index:99; 
+
+position:relative;
+
+padding-bottom:30px;
+
+}
+
+.com_content.featured #vt_header_section{ padding-bottom:0px;}
+
+
+
+.com_content.featured #vt_main_section{z-index:9;}
+
+#vt_main_section{ 
+
+padding:0px 0px 20px;
+
+position: relative;
+
+z-index:1;
+
+}
+
+.com_content.featured #vt_header_section{ padding:0px;}
+
+
+
+.vt_drawer_head_top{ background-position:-50% 0 !important;}
+
+#vt_footer_section{ position:relative; z-index:9; background:#333;}
+
+#vt_main_contaner{ position:relative; z-index:9; display:block; /*clear:both;*/ width:100%;}
+
+.vt_wrapper_header{ position:relative; z-index:999; box-shadow:0 0 4px #999999;}
+
+.ie.ie8 .vt_wrapper_header, .ie.ie7 .vt_wrapper_header{ border-bottom:1px solid #ddd;}
+
+.ie.ie8.com_content.featured .vt_wrapper_header, .ie.ie7.com_content.featured .vt_wrapper_header{ border-bottom:0px;}
+
+
+
+
+
+
+
+.com_content.featured .vt_wrapper_header{box-shadow:none !important;}
+
+.vt_drawer_head{ position:relative; z-index:99;}
+
+.vt_wrapper_top{ position:relative; z-index:1; min-height:10px;}
+
+.vt_wrapper_showcase{ position:relative; z-index:2; background:#f9f9f9;}
+
+#vt_path_wapper{
+
+ position:relative;
+
+ height:50px;
+
+ color:#ee9999;
+
+ } 
+
+#vt_main_show{ 
+
+display:block;
+
+margin:auto 0;
+
+position:relative; 
+
+ }
+
+#vt_main_top{
+
+margin:0 auto;
+
+}
+
+.vt_menufix{ z-index:999; position:relative;} 
+
+.vt_logo_top{ display:inline-block; padding:10px 0px; z-index:9999; position:relative;}
+
+
+
+.vt_wapper_mainmenu{
+
+display:block;
+
+clear:both;
+
+margin:0 auto 20px;
+
+position:relative;
+
+z-index:9999;
+
+}  
+
+#vt_main_menu{
+
+	font-family: "Helvetica Neue",Helvetica,sans-serif !important;
+	
+	position:relative;
+
+	padding:0px;
+
+	margin-top:20px;
+
+	width:100%;
+
+	float:left;
+
+}
+
+#vt_breadcrumb{ width:730px; float:left;}
+
+#vt_top .search {
+
+    -moz-box-sizing: border-box;
+
+    background: none repeat scroll 0 0 #FFFFFF;
+
+    border: 1px solid #DDDDDD;
+
+    box-shadow: 0 0 5px #DDDDDD inset;
+
+    height:40px;
+
+	line-height:40px;
+
+    padding: 0;
+
+	margin-top:15px;
+
+    width: 220px !important;
+
+	float:right;
+
+}
+
+#vt_top .search .inputbox {
+
+width:160px; 
+
+padding:0px 0px 0px 10px !important;
+
+height:32px;
+
+line-height:32px;
+
+float:left; 
+
+border:none; 
+
+background:none; 
+
+color:#666; 
+
+border:0px !important;
+
+position:relative; 
+
+	 }
+
+#vt_top .search .button{
+
+	width:36px; 
+
+	height:36px; 
+
+	*font-size:0px; 
+
+	text-indent:-999999px;
+
+	border:none;
+
+	cursor:pointer; 
+
+	background:url(../images/button_search.png) center center no-repeat;
+
+	*color:#999;
+
+	float:right;
+
+	}
+
+#vt_top .search .button:hover{ cursor:pointer; border:0px !important;}
+
+
+
+.cols3{width:320px; padding:0;}
+
+#vt_inset{ display:block; padding:0px;}
+
+#vt_footer .vt_module_inside{ margin:10px 0px;}
+
+#vt_menu_footer{width:600px; float:left;}
+
+#vt_menu_footer .menu,
+
+#vt_copyright{ font-family:Arial, Helvetica, sans-serif;}
+
+#vt_copyright{ padding:0px; float:left; color:#666;}
+
+#vt_copyright a{ color:#666;}
+
+#vt_footer{ 
+
+margin:0 auto;
+
+padding:10px 0px;
+
+color:#999; 
+
+min-height:50px;
+
+background:#333;
+
+ }
+
+#vt_footer .vt_module_inside{ padding:0px 20px 0px 0px;}
+
+.wapper_copyright_gotop{
+
+padding:10px 0px;	
+
+min-height:50px;
+
+position:relative;
+
+color:#444;
+
+border-top:1px solid #444;
+
+}
+
+
+
+#vt_footer_menu_copyright{ padding-top:10px;}
+
+#vt_footer_menu_copyright .vt_utility_gotop{ 
+
+display:block; 
+
+}
+
+#vt_bottom,#vt_bottom table{ min-height:0px;}
+
+#vt_bottom .vt_module_inside{padding:10px;}
+
+#vt_footer ul{list-style:none; padding:0; margin:0;}
+
+#vt_footer ul li a,#vt_footer ul li a:link,#vt_footer ul li a:visited{
+
+padding:6px 5px 6px 15px;
+
+display:block;
+
+background:url(../images/arrow.png) left center  no-repeat !important;
+
+color:#999;
+
+font-weight:bold;
+
+border:none;
+
+}
+
+#vt_footer ul li a:hover{ text-decoration:none;}
+
+
+
+.vt_moduletable.contact_us span{ display:block; clear:both;}
+
+
+
+
+
+
+
+.width100, .cols-1 .item{ width:100% !important;}
+
+.width50, .cols-2 .item{ width:50% !important;}
+
+.width33, .vt_width33, .cols-3 .item{width:33.33% !important; *width:33% !important;}
+
+.width25, .cols-4 .item{ width:25% !important; *width:24% !important;}
+
+.items-row .item{ float:left;}
+
+
+
+.wapper_item{ padding:0px;}
+
+.vt_randomimage{background-color:#000; background-repeat:no-repeat; background-position:center top; height:100px; width:100%; padding:170px 0 0 0;}
+
+.vt_randomimage .vt_mod_menutitle{width:980px; height:80px; margin:0 auto; padding:0; font-size:400%; color:#fff; text-shadow: 2px 2px 0 #333333; text-transform:uppercase; font-weight:bold;}
+
+
+
+
+.moduletable_shema-buy {
+	height: /*154*/162px;
+	overflow: hidden;
+	position: relative;
+}
+	.moduletable_shema-buy img {
+		margin: 0 0 0 -950px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+	}
+	
+	
+	.moduletable_shema-order {
+	height: /*154*/240px;
+	overflow: hidden;
+	position: relative;
+}
+	.moduletable_shema-order img {
+		margin: 0 0 0 -950px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+	}

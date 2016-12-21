@@ -1,0 +1,208 @@
+/* Landscape phones and down */
+@media (max-width: 480px) {
+/*///////////////  START ////////////////// */
+#vt_body_wrapper {min-width:280px !important;}
+div.vt_section{ width:280px !important;}
+.box_skitter .label_skitter,.vt_wrapper_drawer .moduletable_social,
+.vt_wrapper_drawer .moduletable_topmenu,
+.menu_vtem_nav{ display:none !important;}
+#vt_logo{ background-color:transparent !important;}
+div.itemCommentsForm form .groupinput p{ padding-right:0px !important;}
+#k2Container .subCategoryContainer div.subCategory a.subCategoryImage,
+#k2Container .subCategoryContainer div.subCategory .k2_boxitem,
+div.itemCommentsForm form .groupinput p,
+.vt_blog .registration #member-registration dl dt, 
+.vt_blog .registration #member-registration dl dd,
+.blog-featured .img-intro-left,
+.Infor_farm ul li,
+.contentwidthl,
+.featuremanual1,
+.featuremanual2,
+.utilitymanual1,
+.utilitymanual2,
+.drawermanual1,
+.drawermanual2,
+.vt_width50,
+.navright,
+.navleft,
+.contentwidth,
+.contentwidthl,
+.navleft1, 
+.navright1,
+.vt_img_fix,
+#vt_top .vt_width50,
+#vt_logo,
+.vt_width33,
+.vt_width25,
+.blog-featured .vt_boxitem,
+.article-info dd,
+.Infor_running ul li,
+#k2Container div.catItemImageBlock,
+div.catItemIntroText,
+div.tagItemImageBlock,
+div.tagItemIntroText,
+div.userItemImageBlock,
+div.userItemIntroText,
+.blog .items-row .item img,
+.contentwidth1, .contentwidthr,
+div.itemRelated, div.itemAuthorLatest,
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img{ width:100% !important; min-height:auto !important;}
+#k2Container div.catItemImageBlock span.catItemImage{ padding-right:0px !important;}
+.Infor_running ul li{ margin:10px 0px !important;}
+.custom.vtem_FilterSearch{ padding:15px 0 30px !important;}
+#contact-form #jform_contact_message{ width:210px !important;}
+#contact-form .button_round{ margin-top:15px !important;}
+span.userItemImage,
+span.tagItemImage{ margin:0px 0px 10px !important;}
+.Our_capa ul li,.Clients_choose ul li,.we_offer ul li{width:100% !important; margin:0px 0px 20px; float:left !important;}
+.Clients_choose ul li{
+	padding: 20px 0;
+    text-align: center !important;
+    width: auto !important;
+	border:0px !important;}
+.vt_wrapper_bottom a{ clear:both; float:left; margin-top:20px;}
+.Our_capa ul li,#vt_nav_left .vt_module_inside{ margin:0px 0px 20px 0px;}
+#vt_nav_right .vt_module_inside{ margin:20px 0px 0px 0px;}
+#vt_main_menu{ border:0px !important; height:66px !important; line-height:66px !important;}
+.vt_blog .registration #member-registration dl dt, .vt_blog .registration #member-registration dl dd{
+	min-height:0px !important; line-height:none !important;}
+#k2Container .subCategoryContainer div.subCategory .k2_boxitem{ width:55% !important;}
+
+div.itemRelated, div.itemAuthorLatest{ padding:10px 0px !important;}
+.article-info dd{ margin:0px; padding:0px; line-height:18px;}
+.article-info dd.published{ border:0px;}
+#k2Container div.subCategoryContainer,
+span.userItemImage img, #k2Container .tagItemImage img, 
+div#k2Container div.itemList div.itemContainer .catItemImage img, 
+div#k2Container .itemImage img,
+div.itemListCategory img,
+#k2Container div.subCategory img, 
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img, 
+.items-row img, .item-page img,.blog .items-row .item img, 
+.vt_blog .vt_intro img,.blog-featured .img-intro-left,
+#contact-form #jform_contact_message, .inputbox, #billingDefaultAddress input, #com-form-login-username input, .category-list .inputbox, .login-fields input, #member-registration dd input, input#jform_email, #member-registration dl dd input, .display-limit .inputbox, #contact-form input, #searchForm .inputbox, #finder-filter-window #filter_date1, #finder-filter-window #filter_date2{
+-moz-box-sizing: border-box;
+-webkit--box-sizing: border-box;
+box-sizing: border-box;
+max-width:100% !important;
+	}
+.vtemflybox a{ width:29% !important;}		
+#k2Container .subCategoryContainer div.subCategory a.subCategoryImage{ margin:0px !important;}
+.blog-featured .img-intro-left{ padding:0px !important;}	
+#k2Container div.subCategory{ margin:0px 0px 5px !important;}
+.pagination, .counter{ overflow:auto;}
+div.itemToolbar ul li{ padding-left:0px !important;}
+#k2Container div.itemToolbar{ float:left !important;}
+#vt_footer .vt_moduletable{ min-height:auto !important;}
+.vt_clr,#vt_footer .clearfix3{ clear:both;}
+.vtemdrildown,.vt_drilldown_menu{ display:block !important; position:relative;  margin:27px 15px 0px 0px !important; float:right;}
+.fg-menu-container{ right:0px !important;}
+.headermanual1{ width:70% !important;}
+.headermanual2{ width:30% !important; background:none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;}
+
+#vt_main_menu{ margin-top:0px;}
+.Our_clients .our_infor h3,
+div.moduletable h3, div.moduletable_menu h3, .vt_heading_style h3, div.componentheading h3, .vt_shop_title, .moduletable_best_sales h3, .category_description h3, .moduletable_featured_products h3, .vt_moduletable h3, .finder h1{ font-size:34px !important;}
+.our_manufual ul li{ padding:10px 0px !important; width:45% !important;}
+.blog-featured .img-intro-left{ padding:10px 0px 20px !important;}
+
+/*///////////////  END ////////////////// */
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+/*///////////////  START ////////////////// */
+#vt_body_wrapper {min-width:475px !important;}
+div.vt_section{ width:475px !important;}
+.box_skitter .label_skitter,.vt_wrapper_drawer .moduletable_social,
+.vt_wrapper_drawer .moduletable_topmenu,
+.menu_vtem_nav{ display:none !important;}
+.contentwidthl,
+.featuremanual1,
+.featuremanual2,
+.utilitymanual1,
+.utilitymanual2,
+.vt_width50,
+.navright,
+.navleft,
+.contentwidth,
+.navleft1, 
+.navright1,
+.vt_img_fix,
+.vt_width33,
+#vt_header .vt_width50,
+.Our_capa ul li,
+.contentwidth1, .contentwidthr,
+#k2Container div.itemToolbar,
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img{ width:100% !important;}
+.blog .items-row .item img{ width:45% !important;}
+.Clients_choose ul li,.we_offer ul li{width:50% !important; margin:0px 0px 20px; float:left !important;}
+.Clients_choose ul li{display: block !important;
+    padding: 20px 10px;
+    text-align: center !important;
+    width: auto !important;
+	border:0px !important;
+	}
+.vt_wrapper_bottom a{ clear:both; float:left; margin-top:20px;}
+.Our_capa ul li,#vt_nav_left .vt_module_inside{ margin:0px 0px 20px 0px;}
+#vt_nav_right .vt_module_inside{ margin:20px 0px 0px 0px;}
+#k2Container .subCategoryContainer div.subCategory .k2_boxitem{ width:55% !important;}
+#k2Container div.itemToolbar{ margin:0px 0px 10px !important;}
+.headermanual1{ width:40% !important;}
+.headermanual2{ width:60% !important;}
+.vt_width25{ width:50% !important;}
+#k2Container div.itemToolbar{ float:left !important;}
+div.itemToolbar ul li{ padding-left:0px !important;}
+#k2Container .subCategoryContainer div.subCategory .k2_boxitem{ width:57% !important;}
+.vt_clr,#vt_footer .clearfix3{ clear:both;}
+.vtemdrildown,.vt_drilldown_menu{ display:block !important; position:relative; margin:20px 0px 0px !important; float:right;}
+#vt_main_menu{ margin-top:7px;}
+.Our_clients .our_infor h3,
+div.moduletable h3, div.moduletable_menu h3, .vt_heading_style h3, div.componentheading h3, .vt_shop_title, .moduletable_best_sales h3, .category_description h3, .moduletable_featured_products h3, .vt_moduletable h3, .finder h1{ font-size:34px !important;}
+.our_manufual ul li{ padding:0 10px !important;}
+.blog-featured .img-intro-left{ width:38% !important;}
+
+
+/*///////////////  END ////////////////// */
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+/*///////////////  START ////////////////// */
+#vt_body_wrapper{min-width:750px !important;} 
+div.vt_section{ width:750px !important;}
+.gkHighlighterWrapper {width: 540px !important;}
+div.itemToolbar ul li{ padding-left:0px !important;}
+#k2Container div.itemToolbar{ float:left !important;}
+#vtem_menu ul.menu_vtem_nav > li > a{ margin:0;font-size:13px;}
+#vtem_menu ul.menu_vtem_nav > li > a > span{ padding-right:8px;}
+.menu_vtem_nav li.last.haschild  ul{ left:auto !important; right:0px;}
+.k2CalendarBlock table.calendar tr td{ padding:2px 0px !important;}
+.vt_wrapper_bottom .vt_moduletable .Best_Offers h3{ font-size:30px !important;}
+.we_offer .thumbnail{ width:140px; height:140px;}
+.we_offer span > em{ width:160px; height:160px;}
+.box_skitter .label_skitter{ top:30% !important;}
+.we_offer ul li{ width:23%;}
+.Our_capa ul li{ width:28.8%;}
+.Our_capa ul li h3 span{
+	font-size:60px;
+	}
+.Clients_choose ul li{ width:20.7%;}	
+.Our_capa ul li h3{ font-size:24px !important;}	
+.box_skitter .label_skitter h4{ font-size:40px !important;}
+.our_manufual ul li{ padding:0 18px !important;}
+.vt_footer .newsflash img{ margin-top:-34px;}
+.Our_clients .our_infor h3,.vtem_imagesshow_intro,
+div.moduletable h3, div.moduletable_menu h3, .vt_heading_style h3, div.componentheading h3, .vt_shop_title, .moduletable_best_sales h3, .category_description h3, .moduletable_featured_products h3, .vt_moduletable h3, .finder h1{ font-size:34px !important;}
+div.subCategoryContainer{ padding-bottom:20px !important;}
+
+/*///////////////  END ////////////////// */
+}
+/*Big desktop */
+@media (min-width: 1500px){
+/*///////////////  START ////////////////// */
+/* #vt_body_wrapper{min-width:1200px !important;} */
+/* div.vt_section{ width:1200px !important;} */
+/* #vtem_menu ul.menu_vtem_nav > li > a{ padding:0 15px 25px;} */
+/* .Our_capa ul li{ width:30.5%;} */
+/* .Clients_choose ul li{ width:22.3%;} */
+/*///////////////  END ////////////////// */
+}

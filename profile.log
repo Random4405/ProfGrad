@@ -1,0 +1,1002 @@
+FUNCTION  indent_guides#indent_highlight_pattern()
+Called 240 times
+Total time:   0.004077
+ Self time:   0.004077
+
+count  total (s)   self (s)
+  240              0.001295   let l:pattern  = '^' . a:indent_pattern . '*\%' . a:column_start . 'v\zs'
+  240              0.001489   let l:pattern .= a:indent_pattern . '*\%' . (a:column_start + a:indent_size) . 'v'
+  240              0.000627   let l:pattern .= '\ze'
+  240              0.000437   return l:pattern
+
+FUNCTION  LightLineModified()
+Called 6 times
+Total time:   0.000103
+ Self time:   0.000103
+
+count  total (s)   self (s)
+    6              0.000018   if &filetype == "help"
+                                return ""
+                              elseif &modified
+                                return "+"
+                              elseif &modifiable
+    6              0.000011     return ""
+                              else
+                                return ""
+                              endif
+
+FUNCTION  <SNR>19_RgbBgColor()
+Called 17524 times
+Total time:   0.439241
+ Self time:   0.439241
+
+count  total (s)   self (s)
+17524              0.180871   let bg = synIDattr(synIDtrans(hlID("Normal")), "bg")
+17524              0.072559   let r = str2nr(bg[1:2], 16)
+17524              0.064486   let g = str2nr(bg[3:4], 16)
+17524              0.062687   let b = str2nr(bg[5:6], 16)
+17524              0.040461   return [r,g,b]
+
+FUNCTION  <SNR>19_Rgba2Rgb()
+Called 8 times
+Total time:   0.000617
+ Self time:   0.000617
+
+count  total (s)   self (s)
+                              " converts matched r,g,b values and percentages to [0:255]
+                              " if possible, overlays r,g,b with alpha on given rgb_bg color
+    8              0.000014   if a:percent
+                                let r = a:r * 255 / 100
+                                let g = a:g * 255 / 100
+                                let b = a:b * 255 / 100
+                              else
+    8              0.000016     let r = a:r
+    8              0.000015     let g = a:g
+    8              0.000015     let b = a:b
+    8              0.000008   endif
+    8              0.000021   if r > 255 || g > 255 || b > 255
+                                return []
+                              endif
+    8              0.000021   if empty(a:rgb_bg)
+                                return [r,g,b]
+                              endif
+    8              0.000043   let alpha = str2float(a:alpha)
+    8              0.000012   if alpha < 0
+                                let alpha = 0.0
+                              elseif alpha > 1
+                                let alpha = 1.0
+                              endif
+    8              0.000012   if alpha == 1.0
+                                return [r,g,b]
+                              endif
+    8              0.000061   let r = float2nr(ceil(r * alpha) + ceil(a:rgb_bg[0] * (1 - alpha)))
+    8              0.000048   let g = float2nr(ceil(g * alpha) + ceil(a:rgb_bg[1] * (1 - alpha)))
+    8              0.000045   let b = float2nr(ceil(b * alpha) + ceil(a:rgb_bg[2] * (1 - alpha)))
+    8              0.000012   if r > 255
+                                let r = 255
+                              endif
+    8              0.000011   if g > 255
+                                let g = 255
+                              endif
+    8              0.000009   if b > 255
+                                let b = 255
+                              endif
+    8              0.000017   return [r,g,b]
+
+FUNCTION  <SNR>50_flatten_twice()
+Called 4 times
+Total time:   0.000826
+ Self time:   0.000826
+
+count  total (s)   self (s)
+    4              0.000036   let ys = []
+   14              0.000137   for xs in a:xss
+   28              0.000151     for x in xs
+   18              0.000142       let ys += x
+   18              0.000074     endfor
+   10              0.000038   endfor
+    4              0.000022   return ys
+
+FUNCTION  <SNR>19_HexCode()
+Called 8762 times
+Total time:   1.378110
+ Self time:   1.158874
+
+count  total (s)   self (s)
+                              " finds RGB: #00f #0000ff and RGBA: #00f8 #0000ff88
+                              " Note that ARGB is not supported, since RGBA is much more common
+ 8762              0.044746   if has("gui_running")
+ 8762   0.259743   0.040507     let rgb_bg = s:RgbBgColor()
+ 8762              0.009344   else
+                                " translucent colors would display incorrectly, so ignore the alpha value
+                                let rgb_bg = []
+                              endif
+ 8762              0.014768   let ret = []
+ 8762              0.015637   let place = 0
+ 8762              0.032734   let colorpat = '#[0-9A-Fa-f]\{3\}\>\|#[0-9A-Fa-f]\{6\}\>\|#[0-9A-Fa-f]\{8\}\>\|#[0-9A-Fa-f]\{4\}\>'
+ 9308              0.011991   while 1
+ 9308              0.107041     let foundcolor = matchstr(a:str, colorpat, place)
+ 9308              0.017716     if foundcolor == ''
+ 8762              0.009691       break
+                                endif
+  546              0.006494     let place = matchend(a:str, colorpat, place)
+  546              0.001582     let pat = foundcolor . '\>'
+  546              0.001783     let colorlen = len(foundcolor)
+  546              0.001120     if colorlen == 4 || colorlen == 5
+  204              0.000833       let hr = tolower(foundcolor[1])
+  204              0.000842       let hg = tolower(foundcolor[2])
+  204              0.000747       let hb = tolower(foundcolor[3])
+  204              0.000733       let ha = tolower(foundcolor[4])
+  204              0.002132       let foundcolor = substitute(foundcolor, '[[:xdigit:]]', '&&', 'g')
+  204              0.000229     else
+  342              0.001484       let hr = tolower(foundcolor[1:2])
+  342              0.001354       let hg = tolower(foundcolor[3:4])
+  342              0.001293       let hb = tolower(foundcolor[5:6])
+  342              0.001298       let ha = tolower(foundcolor[7:8])
+  342              0.000372     endif
+  546              0.001535     if len(foundcolor) == 9
+                                  if get(g:, 'colorizer_hex_alpha_first') == 1
+                                    let alpha      = foundcolor[1:2]
+                                    let foundcolor = '#'.foundcolor[3:8]
+                                  else
+                                    let alpha      = foundcolor[7:8]
+                                    let foundcolor = foundcolor[0:6]
+                                  endif
+                                else
+  546              0.000963       let alpha = 'ff'
+  546              0.000645     endif
+  546              0.001279     if empty(rgb_bg)
+                                  if colorlen == 5
+                                    let pat = printf('\c#%s%s%s\ze\x\>', hr,hg,hb)
+                                  endif
+                                  if colorlen == 9
+                                    let pat = printf('\c#%s%s%s\ze\x\x\>', hr,hg,hb)
+                                  endif
+                                endif
+  546              0.002194     if empty(rgb_bg) || tolower(alpha) == 'ff'
+  546              0.002316       call add(ret, [foundcolor, pat])
+  546              0.000535     else
+                                  let rgba    = s:Hexa2Rgba(foundcolor, alpha)
+                                  let rgb     = s:Rgba2Rgb(rgba[0], rgba[1], rgba[2], rgba[3], 0, rgb_bg)
+                                  let l:color = printf('#%02x%02x%02x', rgb[0], rgb[1], rgb[2])
+                                  call add(ret, [l:color, pat])
+                                endif
+  546              0.000625   endwhile
+ 8762              0.012244   return ret
+
+FUNCTION  indent_guides#exclude_filetype()
+Called 4 times
+Total time:   0.000232
+ Self time:   0.000232
+
+count  total (s)   self (s)
+    8              0.000119   for ft in split(&ft, '\.')
+    4              0.000029     if index(g:indent_guides_exclude_filetypes, ft) > -1
+                                  return 1
+                                end
+    4              0.000009   endfor
+    4              0.000008   return 0
+
+FUNCTION  colorizer#ColorHighlight()
+Called 4 times
+Total time:   3.513005
+ Self time:   0.076635
+
+count  total (s)   self (s)
+    4              0.000016   if exists('w:colormatches')
+    4              0.000006     if !a:update
+                                  return
+                                endif
+    4   0.001325   0.000023     call s:ClearMatches()
+    4              0.000004   endif
+    4              0.000016   if (g:colorizer_maxlines > 0) && (g:colorizer_maxlines <= line('$'))
+                                return
+                              end
+    4              0.000016   let w:colormatches = {}
+    4              0.000021   if g:colorizer_fgcontrast != s:saved_fgcontrast || (exists("a:1") && a:1 == '!')
+                                let s:force_group_update = 1
+                              endif
+ 8766              0.011173   for i in range(1, line("$"))
+ 8762   3.487495   0.052427     call s:PreviewColorInLine(i)
+ 8762              0.009242   endfor
+    4              0.000012   let s:force_group_update = 0
+    4              0.000015   let s:saved_fgcontrast = g:colorizer_fgcontrast
+    4              0.000018   augroup Colorizer
+    4              0.000710     au!
+    4              0.000038     if exists('##TextChanged')
+    4              0.000236       autocmd TextChanged * silent call s:TextChanged()
+    4              0.000017       if v:version > 704 || v:version == 704 && has('patch143')
+    4              0.000026         autocmd TextChangedI * silent call s:TextChanged()
+    4              0.000006       else
+                                    " TextChangedI does not work as expected
+                                    autocmd CursorMovedI * silent call s:CursorMoved()
+                                  endif
+    4              0.000004     else
+                                  autocmd CursorMoved,CursorMovedI * silent call s:CursorMoved()
+                                endif
+                                " rgba handles differently, so need updating
+    4              0.000019     autocmd GUIEnter * silent call colorizer#ColorHighlight(1)
+    4              0.000018     autocmd BufEnter * silent call colorizer#ColorHighlight(1)
+    4              0.000024     autocmd WinEnter * silent call colorizer#ColorHighlight(1)
+    4              0.000021     autocmd ColorScheme * let s:force_group_update=1 | silent call colorizer#ColorHighlight(1)
+    4              0.000006   augroup END
+
+FUNCTION  lightline#mode()
+Called 6 times
+Total time:   0.000053
+ Self time:   0.000053
+
+count  total (s)   self (s)
+    6              0.000049   return get(s:lightline.mode_map, mode(), '')
+
+FUNCTION  indent_guides#process_autocmds()
+Called 4 times
+Total time:   0.020232
+ Self time:   0.000084
+
+count  total (s)   self (s)
+    4              0.000018   if g:indent_guides_autocmds_enabled
+    4   0.020184   0.000036     call indent_guides#enable()
+    4              0.000004   else
+                                call indent_guides#disable()
+                              end
+
+FUNCTION  <SNR>19_SetMatcher()
+Called 554 times
+Total time:   0.019268
+ Self time:   0.019268
+
+count  total (s)   self (s)
+                              " "color" is the converted color and "pat" is what to highlight
+  554              0.002308   let group = 'Color' . strpart(a:color, 1)
+  554              0.002605   if !hlexists(group) || s:force_group_update
+                                let fg = g:colorizer_fgcontrast < 0 ? a:color : s:FGforBG(a:color)
+                                if &t_Co == 256
+                                  exe 'hi '.group.' ctermfg='.s:Rgb2xterm(fg).' ctermbg='.s:Rgb2xterm(a:color)
+                                endif
+                                " Always set gui* as user may switch to GUI version and it's cheap
+                                exe 'hi '.group.' guifg='.fg.' guibg='.a:color
+                              endif
+  554              0.002369   if !exists("w:colormatches[a:pat]")
+  132              0.001576     let w:colormatches[a:pat] = matchadd(group, a:pat)
+  132              0.000147   endif
+
+FUNCTION  lightline#update_once()
+Called 2 times
+Total time:   0.000031
+ Self time:   0.000031
+
+count  total (s)   self (s)
+    2              0.000020   if !exists('w:lightline') || w:lightline
+                                call lightline#update()
+                              endif
+
+FUNCTION  lightline#link()
+Called 6 times
+Total time:   0.000260
+ Self time:   0.000260
+
+count  total (s)   self (s)
+    6              0.000167   let mode = get(s:lightline._mode_, a:0 ? a:1 : mode(), 'normal')
+    6              0.000034   if s:mode == mode
+    6              0.000027     return ''
+                              endif
+                              let s:mode = mode
+                              if !has_key(s:highlight, mode)
+                                call lightline#highlight(mode)
+                              endif
+                              let types = map(s:uniq(sort(filter(values(s:lightline.component_type), 'v:val !=# "raw"'))), '[v:val, 1]')
+                              for [p, l] in [['Left', len(s:lightline.active.left)], ['Right', len(s:lightline.active.right)]]
+                                for [i, t] in map(range(0, l), '[v:val, 0]') + types
+                                  if i != l
+                                    exec printf('hi link LightLine%s_active_%s LightLine%s_%s_%s', p, i, p, mode, i)
+                                  endif
+                                  for [j, s] in map(range(0, l), '[v:val, 0]') + types
+                                    if i + 1 == j || t || s && i != l
+                                      exec printf('hi link LightLine%s_active_%s_%s LightLine%s_%s_%s_%s', p, i, j, p, mode, i, j)
+                                    endif
+                                  endfor
+                                endfor
+                              endfor
+                              exec printf('hi link LightLineMiddle_active LightLineMiddle_%s', mode)
+                              return ''
+
+FUNCTION  <SNR>50_subseparator()
+Called 8 times
+Total time:   0.002242
+ Self time:   0.002242
+
+count  total (s)   self (s)
+    8              0.000233   let [a, c, f, v, u ] = [ a:components, s:lightline.component, s:lightline.component_function, s:lightline.component_visible_condition, s:lightline.component_function_visible_condition ]
+    8              0.001643   let xs = map(range(len(a:components)), 'a:expanded[v:val] ? "1" : has_key(f, a[v:val]) ? (has_key(u, a[v:val]) ? "(".u[a[v:val]].")" : (exists("*".f[a[v:val]]) ? "" : "exists(\"*".f[a[v:val]]."\")&&").f[a[v:val]]."()!=#\"\"") : has_key(v, a[v:val]) ? "(".v[a[v:val]].")" : has_key(c, a[v:val]) ? "1" : "0"')
+    8              0.000330   return '%{' . (xs[0] ==# '1' || xs[0] ==# '(1)' ? '' : xs[0] . '&&(') . join(xs[1:], '||') . (xs[0] ==# '1' || xs[0] ==# '(1)' ? '' : ')') . '?"' . a:subseparator . '":""}'
+
+FUNCTION  indent_guides#clear_matches()
+Called 4 times
+Total time:   0.006171
+ Self time:   0.006111
+
+count  total (s)   self (s)
+    4   0.000091   0.000031   call indent_guides#init_matches()
+    4              0.000025   if !empty(w:indent_guides_matches)
+    4              0.000018     let l:index = 0
+  244              0.000569     for l:match_id in w:indent_guides_matches
+  240              0.000485       try
+  240              0.001137         call matchdelete(l:match_id)
+  240              0.000418       catch /E803:/
+                                    " Do nothing
+                                  endtry
+  240              0.001243       call remove(w:indent_guides_matches, l:index)
+  240              0.000879       let l:index += l:index
+  240              0.000400     endfor
+    4              0.000004   endif
+
+FUNCTION  <SNR>19_RgbaColor()
+Called 8762 times
+Total time:   0.964124
+ Self time:   0.743502
+
+count  total (s)   self (s)
+ 8762              0.045853   if has("gui_running")
+ 8762   0.261437   0.041432     let rgb_bg = s:RgbBgColor()
+ 8762              0.009299   else
+                                " translucent colors would display incorrectly, so ignore the alpha value
+                                let rgb_bg = []
+                              endif
+ 8762              0.014696   let ret = []
+ 8762              0.015590   let place = 0
+ 8762              0.016009   let percent = 0
+ 8762              0.033046   let colorpat = '\<rgba(\v\s*(\d+(\%)?)\s*,\s*(\d+%(\2))\s*,\s*(\d+%(\2))\s*,\s*(-?[.[:digit:]]+)\s*\)'
+ 8770              0.011295   while 1
+ 8770              0.110806     let foundcolor = matchlist(a:str, colorpat, place)
+ 8770              0.023556     if empty(foundcolor)
+ 8762              0.010164       break
+                                endif
+    8              0.000020     if foundcolor[2] == '%'
+                                  let percent = 1
+                                endif
+    8   0.000697   0.000080     let rgb = s:Rgba2Rgb(foundcolor[1], foundcolor[3], foundcolor[4], foundcolor[5], percent, rgb_bg)
+    8              0.000017     if empty(rgb)
+                                  break
+                                endif
+    8              0.000142     let place = matchend(a:str, colorpat, place)
+    8              0.000021     if empty(rgb_bg)
+                                  let pat = printf('\<rgba(\v\s*%s\s*,\s*%s\s*,\s*%s\s*,\ze\s*(-?[.[:digit:]]+)\s*\)', foundcolor[1], foundcolor[3], foundcolor[4])
+                                else
+    8              0.000076       let pat = printf('\<rgba(\v\s*%s\s*,\s*%s\s*,\s*%s\s*,\s*%s0*\s*\)', foundcolor[1], foundcolor[3], foundcolor[4], foundcolor[5])
+    8              0.000009     endif
+    8              0.000008     if percent
+                                  let pat = substitute(pat, '%', '\\%', 'g')
+                                endif
+    8              0.000059     let l:color = printf('#%02x%02x%02x', rgb[0], rgb[1], rgb[2])
+    8              0.000034     call add(ret, [l:color, pat])
+    8              0.000010   endwhile
+ 8762              0.012003   return ret
+
+FUNCTION  indent_guides#init_script_vars()
+Called 4 times
+Total time:   0.001683
+ Self time:   0.001194
+
+count  total (s)   self (s)
+    4              0.000024   if &l:shiftwidth > 0 && &l:expandtab
+    4              0.000021     let s:indent_size = &l:shiftwidth
+    4              0.000008   else
+                                let s:indent_size = &l:tabstop
+                              endif
+    4   0.000158   0.000062   let s:guide_size  = indent_guides#calculate_guide_size()
+    4   0.000439   0.000046   let s:hi_normal   = indent_guides#capture_highlight('Normal')
+                            
+                              " remove 'font=<value>' from the s:hi_normal string (only seems to happen on Vim startup in Windows)
+    4              0.000533   let s:hi_normal = substitute(s:hi_normal, ' font=[A-Za-z0-9:]\+', "", "")
+                            
+                              " shortcuts to the global variables - this makes the code easier to read
+    4              0.000028   let s:debug             = g:indent_guides_debug
+    4              0.000024   let s:indent_levels     = g:indent_guides_indent_levels
+    4              0.000023   let s:auto_colors       = g:indent_guides_auto_colors
+    4              0.000027   let s:color_hex_pat     = g:indent_guides_color_hex_pattern
+    4              0.000027   let s:color_hex_bg_pat  = g:indent_guides_color_hex_guibg_pattern
+    4              0.000026   let s:color_name_bg_pat = g:indent_guides_color_name_guibg_pattern
+    4              0.000022   let s:start_level       = g:indent_guides_start_level
+                            
+                              " str2float not available in vim versions <= 7.1
+    4              0.000033   if has('float')
+    4              0.000052     let s:change_percent = g:indent_guides_color_change_percent / str2float('100.0')
+    4              0.000009   else
+                                let s:change_percent = g:indent_guides_color_change_percent / 100.0
+                              endif
+                            
+    4              0.000009   if s:debug
+                                echo 's:indent_size = '       . s:indent_size
+                                echo 's:guide_size = '        . s:guide_size
+                                echo 's:hi_normal = '         . s:hi_normal
+                                echo 's:indent_levels = '     . s:indent_levels
+                                echo 's:auto_colors = '       . s:auto_colors
+                                echo 's:change_percent = '    . string(s:change_percent)
+                                echo 's:color_hex_pat = '     . s:color_hex_pat
+                                echo 's:color_hex_bg_pat = '  . s:color_hex_bg_pat
+                                echo 's:color_name_bg_pat = ' . s:color_name_bg_pat
+                                echo 's:start_level = '       . s:start_level
+                              endif
+
+FUNCTION  <SNR>19_PreviewColorInLine()
+Called 8762 times
+Total time:   3.435068
+ Self time:   0.525772
+
+count  total (s)   self (s)
+ 8762              0.032446   let line = getline(a:where)
+35048              0.067120   for Func in s:ColorFinder
+26286   3.041191   0.151163     let ret = Func(line, a:where)
+                                " returned a list of a list: color as #rrggbb, text pattern to highlight
+26840              0.044960     for r in ret
+  554   0.023264   0.003996       call s:SetMatcher(r[0], r[1])
+  554              0.000566     endfor
+26286              0.025597   endfor
+
+FUNCTION  <SNR>30_record()
+Called 4 times
+Total time:   0.001795
+ Self time:   0.000389
+
+count  total (s)   self (s)
+    4              0.000058 	if s:locked | retu | en
+    4              0.000039 	let bufnr = a:bufnr + 0
+    4              0.000047 	let bufname = bufname(bufnr)
+    4              0.000035 	if bufnr > 0 && !empty(bufname)
+    4              0.000072 		cal filter(s:mrbs, 'v:val != bufnr')
+    4              0.000033 		cal insert(s:mrbs, bufnr)
+    4   0.001472   0.000066 		cal s:addtomrufs(bufname)
+    4              0.000010 	en
+
+FUNCTION  indent_guides#highlight_colors()
+Called 4 times
+Total time:   0.000097
+ Self time:   0.000097
+
+count  total (s)   self (s)
+    4              0.000014   if s:auto_colors
+                                if has('gui_running') || has('nvim')
+                                  call indent_guides#gui_highlight_colors()
+                                else
+                                  call indent_guides#basic_highlight_colors()
+                                endif
+                              endif
+
+FUNCTION  indent_guides#capture_highlight()
+Called 4 times
+Total time:   0.000393
+ Self time:   0.000393
+
+count  total (s)   self (s)
+    4              0.000033   redir => l:output
+    4              0.000250   exe "silent hi " . a:group_name
+    4              0.000024   redir END
+                            
+    4              0.000059   let l:output = substitute(l:output, "\n", "", "")
+    4              0.000014   return l:output
+
+FUNCTION  lightline#update()
+Called 2 times
+Total time:   0.012500
+ Self time:   0.000381
+
+count  total (s)   self (s)
+    2              0.000015   if s:_
+                                call lightline#init()
+                                call lightline#colorscheme()
+                              endif
+    2              0.000019   if !s:lightline.enable.statusline
+                                return
+                              endif
+    2              0.000027   let w = winnr()
+    2   0.012196   0.000077   let s = winnr('$') == 1 ? [lightline#statusline(0)] : [lightline#statusline(0), lightline#statusline(1)]
+    4              0.000028   for n in range(1, winnr('$'))
+    2              0.000082     call setwinvar(n, '&statusline', s[n!=w])
+    2              0.000021     call setwinvar(n, 'lightline', n!=w)
+    2              0.000005   endfor
+
+FUNCTION  indent_guides#enable()
+Called 4 times
+Total time:   0.020148
+ Self time:   0.007888
+
+count  total (s)   self (s)
+    4              0.000021   let g:indent_guides_autocmds_enabled = 1
+                            
+    4   0.000275   0.000043   if &diff || indent_guides#exclude_filetype()
+                                call indent_guides#clear_matches()
+                                return
+                              end
+                            
+    4   0.001726   0.000043   call indent_guides#init_script_vars()
+    4   0.000146   0.000049   call indent_guides#highlight_colors()
+    4   0.006206   0.000035   call indent_guides#clear_matches()
+                            
+                              " loop through each indent level and define a highlight pattern
+                              " will automagically figure out whether to use tabs or spaces
+  124              0.000230   for l:level in range(s:start_level, s:indent_levels)
+  120              0.000456     let l:group = 'IndentGuides' . ((l:level % 2 == 0) ? 'Even' : 'Odd')
+  120              0.000544     let l:column_start = (l:level - 1) * s:indent_size + 1
+                            
+                                " define the higlight patterns and add to matches list
+  120              0.000239     if g:indent_guides_space_guides
+  120   0.003101   0.001045       let l:soft_pattern = indent_guides#indent_highlight_pattern(g:indent_guides_soft_pattern, l:column_start, s:guide_size)
+  120              0.001640       call add(w:indent_guides_matches, matchadd(l:group, l:soft_pattern))
+  120              0.000139     end
+  120              0.000234     if g:indent_guides_tab_guides
+  120   0.002976   0.000955       let l:hard_pattern = indent_guides#indent_highlight_pattern('\t', l:column_start, s:indent_size)
+  120              0.001523       call add(w:indent_guides_matches, matchadd(l:group, l:hard_pattern))
+  120              0.000138     end
+  120              0.000124   endfor
+
+FUNCTION  indent_guides#init_matches()
+Called 4 times
+Total time:   0.000060
+ Self time:   0.000060
+
+count  total (s)   self (s)
+    4              0.000057   let w:indent_guides_matches = exists('w:indent_guides_matches') ? w:indent_guides_matches : []
+
+FUNCTION  LightLineReadonly()
+Called 6 times
+Total time:   0.000092
+ Self time:   0.000092
+
+count  total (s)   self (s)
+    6              0.000025   if &filetype == "help"
+                                return ""
+                              elseif &readonly
+                                return "⭤"
+                              else
+    6              0.000010     return ""
+                              endif
+
+FUNCTION  <SNR>19_RgbColor()
+Called 8762 times
+Total time:   0.547794
+ Self time:   0.547794
+
+count  total (s)   self (s)
+ 8762              0.023370   let ret = []
+ 8762              0.015774   let place = 0
+ 8762              0.028413   let colorpat = '\<rgb(\v\s*(\d+(\%)?)\s*,\s*(\d+%(\2))\s*,\s*(\d+%(\2))\s*\)'
+ 8762              0.011492   while 1
+ 8762              0.093048     let foundcolor = matchlist(a:str, colorpat, place)
+ 8762              0.023274     if empty(foundcolor)
+ 8762              0.009986       break
+                                endif
+                                let place = matchend(a:str, colorpat, place)
+                                if foundcolor[2] == '%'
+                                  let r = foundcolor[1] * 255 / 100
+                                  let g = foundcolor[3] * 255 / 100
+                                  let b = foundcolor[4] * 255 / 100
+                                else
+                                  let r = foundcolor[1]
+                                  let g = foundcolor[3]
+                                  let b = foundcolor[4]
+                                endif
+                                if r > 255 || g > 255 || b > 255
+                                  break
+                                endif
+                                let pat = printf('\<rgb(\v\s*%s\s*,\s*%s\s*,\s*%s\s*\)', foundcolor[1], foundcolor[3], foundcolor[4])
+                                if foundcolor[2] == '%'
+                                  let pat = substitute(pat, '%', '\\%', 'g')
+                                endif
+                                let l:color = printf('#%02x%02x%02x', r, g, b)
+                                call add(ret, [l:color, pat])
+                              endwhile
+ 8762              0.012069   return ret
+
+FUNCTION  LightLineFilename()
+Called 6 times
+Total time:   0.000348
+ Self time:   0.000153
+
+count  total (s)   self (s)
+    6   0.000341   0.000146   return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') . ('' != expand('%:t') ? expand('%:t') : '[No Name]') . ('' != LightLineModified() ? ' ' . LightLineModified() : '')
+
+FUNCTION  <SNR>39_LocalBrowse()
+Called 2 times
+Total time:   0.000135
+ Self time:   0.000135
+
+count  total (s)   self (s)
+                              " Unfortunate interaction -- only DechoMsg debugging calls can be safely used here.
+                              " Otherwise, the BufEnter event gets triggered when attempts to write to
+                              " the DBG buffer are made.
+                              
+    2              0.000008   if !exists("s:vimentered")
+                               " If s:vimentered doesn't exist, then the VimEnter event hasn't fired.  It will,
+                               " and so s:VimEnter() will then be calling this routine, but this time with s:vimentered defined.
+                            "   call Dfunc("s:LocalBrowse(dirname<".a:dirname.">)  (s:vimentered doesn't exist)")
+                            "   call Dret("s:LocalBrowse")
+                               return
+                              endif
+                            
+                            "  call Dfunc("s:LocalBrowse(dirname<".a:dirname.">)  (s:vimentered=".s:vimentered.")")
+                            
+    2              0.000016   if has("amiga")
+                               " The check against '' is made for the Amiga, where the empty
+                               " string is the current directory and not checking would break
+                               " things such as the help command.
+                            "   call Decho("(LocalBrowse) dirname<".a:dirname.">  (isdirectory, amiga)")
+                               if a:dirname != '' && isdirectory(a:dirname)
+                                sil! call netrw#LocalBrowseCheck(a:dirname)
+                                if exists("w:netrw_bannercnt") && line('.') < w:netrw_bannercnt
+                                 exe w:netrw_bannercnt
+                                endif
+                               endif
+                            
+                              elseif isdirectory(a:dirname)
+                            "   call Decho("(LocalBrowse) dirname<".a:dirname."> ft=".&ft."  (isdirectory, not amiga)")
+                            "   call Dredir("LocalBrowse ft last set: ","verbose set ft")
+                            "   call Decho("(s:LocalBrowse) COMBAK#23: buf#".bufnr("%")." file<".expand("%")."> line#".line(".")." col#".col("."))
+                               sil! call netrw#LocalBrowseCheck(a:dirname)
+                            "   call Decho("(s:LocalBrowse) COMBAK#24: buf#".bufnr("%")." file<".expand("%")."> line#".line(".")." col#".col("."))
+                               if exists("w:netrw_bannercnt") && line('.') < w:netrw_bannercnt
+                                exe w:netrw_bannercnt
+                            "    call Decho("(s:LocalBrowse) COMBAK#25: buf#".bufnr("%")." file<".expand("%")."> line#".line(".")." col#".col("."))
+                               endif
+                            
+                              else
+                               " not a directory, ignore it
+                            "   call Decho("(LocalBrowse) dirname<".a:dirname."> not a directory, ignoring...")
+    2              0.000002   endif
+                            "  call Decho("(s:LocalBrowse) COMBAK#26: buf#".bufnr("%")." file<".expand("%")."> line#".line(".")." col#".col("."))
+                            
+                            "  call Dret("s:LocalBrowse")
+
+FUNCTION  indent_guides#calculate_guide_size()
+Called 4 times
+Total time:   0.000096
+ Self time:   0.000096
+
+count  total (s)   self (s)
+    4              0.000026   let l:guide_size = g:indent_guides_guide_size
+                            
+    4              0.000022   if l:guide_size == 0 || l:guide_size > s:indent_size
+                                let l:guide_size = s:indent_size
+                              endif
+                            
+    4              0.000013   return l:guide_size
+
+FUNCTION  <SNR>50_line()
+Called 2 times
+Total time:   0.011997
+ Self time:   0.004734
+
+count  total (s)   self (s)
+    2              0.000026   let _ = a:tabline ? '' : '%{lightline#link()}'
+    2              0.000023   if s:lightline.palette == {}
+                                call lightline#colorscheme()
+                              endif
+    2              0.000048   let [l, r] = a:tabline ? [s:lightline.tab_llen, s:lightline.tab_rlen] : [s:lightline.llen, s:lightline.rlen]
+    2              0.000045   let [p, s] = a:tabline ? [s:lightline.tabline_separator, s:lightline.tabline_subseparator] : [s:lightline.separator, s:lightline.subseparator]
+    2              0.000039   let [c, f, t] = [s:lightline.component, s:lightline.component_function, s:lightline.component_type]
+    2              0.000027   let mode = a:tabline ? 'tabline' : a:inactive ? 'inactive' : 'active'
+    2              0.000047   let l_ = has_key(s:lightline, mode) ? s:lightline[mode].left : s:lightline.active.left
+    2   0.002465   0.000083   let [lt, lc, ll] = s:expand(copy(l_))
+    2              0.000047   let r_ = has_key(s:lightline, mode) ? s:lightline[mode].right : s:lightline.active.right
+    2   0.002734   0.000095   let [rt, rc, rl] = s:expand(copy(r_))
+    6              0.000054   for i in range(len(lt))
+    4              0.000077     let _ .= '%#LightLineLeft_' . mode . '_' . ll[i] . '#'
+   12              0.000110     for j in range(len(lt[i]))
+    8              0.000421       let x = lc[i][j] ? lt[i][j] : has_key(f, lt[i][j]) ? (exists('*' . f[lt[i][j]]) ? '%{' . f[lt[i][j]] . '()}' : '%{exists("*' . f[lt[i][j]] . '")?' . f[lt[i][j]] . '():""}') : get(c, lt[i][j], '')
+    8              0.000213       let _ .= has_key(t, lt[i][j]) && t[lt[i][j]] ==# 'raw' || x ==# '' ? x : '%( ' . x . ' %)'
+    8              0.000123       if j < len(lt[i]) - 1 && s.left !=# ''
+    4   0.001145   0.000190         let _ .= s:subseparator(lt[i][(j):], s.left, lc[i][(j):])
+    4              0.000018       endif
+    8              0.000031     endfor
+    4              0.000092     let _ .= '%#LightLineLeft_' . mode . '_' . ll[i] . '_' . ll[i + 1] . '#'
+    4              0.000139     let _ .= i < l + len(lt) - len(l_) && ll[i] < l || ll[i] != ll[i + 1] ? p.left : len(lt[i]) ? s.left : ''
+    4              0.000018   endfor
+    2              0.000027   let _ .= '%#LightLineMiddle_' . mode . '#%='
+    8              0.000058   for i in reverse(range(len(rt)))
+    6              0.000113     let _ .= '%#LightLineRight_' . mode . '_' . rl[i] . '_' . rl[i + 1] . '#'
+    6              0.000159     let _ .= i < r + len(rt) - len(r_) && rl[i] < r || rl[i] != rl[i + 1] ? p.right : len(rt[i]) ? s.right : ''
+    6              0.000084     let _ .= '%#LightLineRight_' . mode . '_' . rl[i] . '#'
+   16              0.000122     for j in range(len(rt[i]))
+   10              0.000363       let x = rc[i][j] ? rt[i][j] : has_key(f, rt[i][j]) ? (exists('*' . f[rt[i][j]]) ? '%{' . f[rt[i][j]] . '()}' : '%{exists("*' . f[rt[i][j]] . '")?' . f[rt[i][j]] . '():""}') : get(c, rt[i][j], '')
+   10              0.000210       let _ .= has_key(t, rt[i][j]) && t[rt[i][j]] ==# 'raw' || x ==# '' ? x : '%( ' . x . ' %)'
+   10              0.000115       if j < len(rt[i]) - 1 && s.right !=# ''
+    4   0.001440   0.000153         let _ .= s:subseparator(rt[i][(j):], s.right, rc[i][(j):])
+    4              0.000015       endif
+   10              0.000027     endfor
+    6              0.000013   endfor
+    2              0.000008   return _
+
+FUNCTION  <SNR>50_convert()
+Called 18 times
+Total time:   0.001226
+ Self time:   0.001226
+
+count  total (s)   self (s)
+   18              0.000251   if has_key(s:lightline.component_expand, a:name)
+                                let type = get(s:lightline.component_type, a:name, a:index)
+                                return filter(s:map(s:evaluate_expand(s:lightline.component_expand[a:name]), '[v:val, 1, v:key == 1 ? "' . type . '" : "' . a:index . '"]'), 'v:val[0] != []')
+                              else
+   18              0.000219     return [[[a:name], 0, a:index]]
+                              endif
+
+FUNCTION  LightLineFugitive()
+Called 12 times
+Total time:   0.000217
+ Self time:   0.000217
+
+count  total (s)   self (s)
+   12              0.000079   if exists("*fugitive#head")
+                                let branch = fugitive#head()
+                                return branch !=# '' ? ' '.branch : ''
+                              endif
+   12              0.000019   return ''
+
+FUNCTION  <SNR>50_expand()
+Called 4 times
+Total time:   0.005021
+ Self time:   0.002969
+
+count  total (s)   self (s)
+    4              0.000037   let components = []
+    4              0.000031   let expanded = []
+    4              0.000030   let indices = []
+    4              0.000032   let previndex = -1
+    4   0.002650   0.000598   let xs = s:flatten_twice(s:map(deepcopy(a:components), 'map(v:val, "s:convert(v:val, ''" . v:key . "'')")'))
+   22              0.000176   for [component, expand, index] in xs
+   18              0.000191     if previndex != index
+   10              0.000115       call add(indices, index)
+   10              0.000098       call add(components, [])
+   10              0.000091       call add(expanded, [])
+   10              0.000038     endif
+   18              0.000248     call extend(components[-1], component)
+   18              0.000407     call extend(expanded[-1], repeat([expand], len(component)))
+   18              0.000147     let previndex = index
+   18              0.000074   endfor
+    4              0.000084   call add(indices, string(len(a:components)))
+    4              0.000043   return [components, expanded, indices]
+
+FUNCTION  <SNR>19_ClearMatches()
+Called 4 times
+Total time:   0.001302
+ Self time:   0.001302
+
+count  total (s)   self (s)
+    4              0.000015   if !exists('w:colormatches')
+                                return
+                              endif
+  136              0.000206   for i in values(w:colormatches)
+  132              0.000168     try
+  132              0.000353       call matchdelete(i)
+  132              0.000148     catch /.*/
+                                  " matches have been cleared in other ways, e.g. user has called clearmatches()
+                                endtry
+  132              0.000129   endfor
+    4              0.000018   unlet w:colormatches
+
+FUNCTION  <SNR>38_Highlight_Matching_Pair()
+Called 4 times
+Total time:   0.004632
+ Self time:   0.004632
+
+count  total (s)   self (s)
+                              " Remove any previous match.
+    4              0.000030   if exists('w:paren_hl_on') && w:paren_hl_on
+    4              0.000021     silent! call matchdelete(3)
+    4              0.000015     let w:paren_hl_on = 0
+    4              0.000005   endif
+                            
+                              " Avoid that we remove the popup menu.
+                              " Return when there are no colors (looks like the cursor jumps).
+    4              0.000052   if pumvisible() || (&t_Co < 8 && !has("gui_running"))
+                                return
+                              endif
+                            
+                              " Get the character under the cursor and check if it's in 'matchpairs'.
+    4              0.000016   let c_lnum = line('.')
+    4              0.000014   let c_col = col('.')
+    4              0.000007   let before = 0
+                            
+    4              0.000018   let text = getline(c_lnum)
+    4              0.000091   let matches = matchlist(text, '\(.\)\=\%'.c_col.'c\(.\=\)')
+    4              0.000013   if empty(matches)
+                                let [c_before, c] = ['', '']
+                              else
+    4              0.000024     let [c_before, c] = matches[1:2]
+    4              0.000004   endif
+    4              0.000062   let plist = split(&matchpairs, '.\zs[:,]')
+    4              0.000020   let i = index(plist, c)
+    4              0.000008   if i < 0
+                                " not found, in Insert mode try character before the cursor
+                                if c_col > 1 && (mode() == 'i' || mode() == 'R')
+                                  let before = strlen(c_before)
+                                  let c = c_before
+                                  let i = index(plist, c)
+                                endif
+                                if i < 0
+                                  " not found, nothing to do
+                                  return
+                                endif
+                              endif
+                            
+                              " Figure out the arguments for searchpairpos().
+    4              0.000006   if i % 2 == 0
+                                let s_flags = 'nW'
+                                let c2 = plist[i + 1]
+                              else
+    4              0.000009     let s_flags = 'nbW'
+    4              0.000008     let c2 = c
+    4              0.000014     let c = plist[i - 1]
+    4              0.000004   endif
+    4              0.000010   if c == '['
+                                let c = '\['
+                                let c2 = '\]'
+                              endif
+                            
+                              " Find the match.  When it was just before the cursor move it there for a
+                              " moment.
+    4              0.000006   if before > 0
+                                let has_getcurpos = exists("*getcurpos")
+                                if has_getcurpos
+                                  " getcurpos() is more efficient but doesn't exist before 7.4.313.
+                                  let save_cursor = getcurpos()
+                                else
+                                  let save_cursor = winsaveview()
+                                endif
+                                call cursor(c_lnum, c_col - before)
+                              endif
+                            
+                              " Build an expression that detects whether the current cursor position is in
+                              " certain syntax types (string, comment, etc.), for use as searchpairpos()'s
+                              " skip argument.
+                              " We match "escape" for special items, such as lispEscapeSpecial.
+    4              0.000023   let s_skip = '!empty(filter(map(synstack(line("."), col(".")), ''synIDattr(v:val, "name")''), ' . '''v:val =~? "string\\|character\\|singlequote\\|escape\\|comment"''))'
+                              " If executing the expression determines that the cursor is currently in
+                              " one of the syntax types, then we want searchpairpos() to find the pair
+                              " within those syntax types (i.e., not skip).  Otherwise, the cursor is
+                              " outside of the syntax types and s_skip should keep its value so we skip any
+                              " matching pair inside the syntax types.
+    4              0.000427   execute 'if' s_skip '| let s_skip = 0 | endif'
+                            
+                              " Limit the search to lines visible in the window.
+    4              0.000017   let stoplinebottom = line('w$')
+    4              0.000019   let stoplinetop = line('w0')
+    4              0.000006   if i % 2 == 0
+                                let stopline = stoplinebottom
+                              else
+    4              0.000013     let stopline = stoplinetop
+    4              0.000006   endif
+                            
+                              " Limit the search time to 300 msec to avoid a hang on very long lines.
+                              " This fails when a timeout is not supported.
+    4              0.000016   if mode() == 'i' || mode() == 'R'
+                                let timeout = exists("b:matchparen_insert_timeout") ? b:matchparen_insert_timeout : g:matchparen_insert_timeout
+                              else
+    4              0.000026     let timeout = exists("b:matchparen_timeout") ? b:matchparen_timeout : g:matchparen_timeout
+    4              0.000004   endif
+    4              0.000011   try
+    4              0.002733     let [m_lnum, m_col] = searchpairpos(c, '', c2, s_flags, s_skip, stopline, timeout)
+    4              0.000022   catch /E118/
+                                " Can't use the timeout, restrict the stopline a bit more to avoid taking
+                                " a long time on closed folds and long lines.
+                                " The "viewable" variables give a range in which we can scroll while
+                                " keeping the cursor at the same position.
+                                " adjustedScrolloff accounts for very large numbers of scrolloff.
+                                let adjustedScrolloff = min([&scrolloff, (line('w$') - line('w0')) / 2])
+                                let bottom_viewable = min([line('$'), c_lnum + &lines - adjustedScrolloff - 2])
+                                let top_viewable = max([1, c_lnum-&lines+adjustedScrolloff + 2])
+                                " one of these stoplines will be adjusted below, but the current values are
+                                " minimal boundaries within the current window
+                                if i % 2 == 0
+                                  if has("byte_offset") && has("syntax_items") && &smc > 0
+                            	let stopbyte = min([line2byte("$"), line2byte(".") + col(".") + &smc * 2])
+                            	let stopline = min([bottom_viewable, byte2line(stopbyte)])
+                                  else
+                            	let stopline = min([bottom_viewable, c_lnum + 100])
+                                  endif
+                                  let stoplinebottom = stopline
+                                else
+                                  if has("byte_offset") && has("syntax_items") && &smc > 0
+                            	let stopbyte = max([1, line2byte(".") + col(".") - &smc * 2])
+                            	let stopline = max([top_viewable, byte2line(stopbyte)])
+                                  else
+                            	let stopline = max([top_viewable, c_lnum - 100])
+                                  endif
+                                  let stoplinetop = stopline
+                                endif
+                                let [m_lnum, m_col] = searchpairpos(c, '', c2, s_flags, s_skip, stopline)
+                              endtry
+                            
+    4              0.000008   if before > 0
+                                if has_getcurpos
+                                  call setpos('.', save_cursor)
+                                else
+                                  call winrestview(save_cursor)
+                                endif
+                              endif
+                            
+                              " If a match is found setup match highlighting.
+    4              0.000015   if m_lnum > 0 && m_lnum >= stoplinetop && m_lnum <= stoplinebottom 
+    4              0.000018     if exists('*matchaddpos')
+    4              0.000184       call matchaddpos('MatchParen', [[c_lnum, c_col - before], [m_lnum, m_col]], 10, 3)
+    4              0.000006     else
+                                  exe '3match MatchParen /\(\%' . c_lnum . 'l\%' . (c_col - before) . 'c\)\|\(\%' . m_lnum . 'l\%' . m_col . 'c\)/'
+                                endif
+    4              0.000012     let w:paren_hl_on = 1
+    4              0.000004   endif
+
+FUNCTION  <SNR>30_addtomrufs()
+Called 4 times
+Total time:   0.001406
+ Self time:   0.001406
+
+count  total (s)   self (s)
+    4              0.000246 	let fn = fnamemodify(a:fname, ':p')
+    4              0.000110 	let fn = exists('+ssl') ? tr(fn, '/', '\') : fn
+    4              0.000772 	if ( !empty({s:in}) && fn !~# {s:in} ) || ( !empty({s:ex}) && fn =~# {s:ex} ) || !empty(getbufvar('^'.fn.'$', '&bt')) || !filereadable(fn) | retu
+                            	en
+    4              0.000073 	let idx = index(s:mrufs, fn, 0, !{s:cseno})
+    4              0.000016 	if idx
+    2              0.000019 		cal filter(s:mrufs, 'v:val !='.( {s:cseno} ? '#' : '?' ).' fn')
+    2              0.000006 		cal insert(s:mrufs, fn)
+    2              0.000007 		if {s:soup} && idx < 0
+                            			cal s:savetofile(s:mergelists())
+                            		en
+    2              0.000002 	en
+
+FUNCTION  lightline#statusline()
+Called 2 times
+Total time:   0.012119
+ Self time:   0.000122
+
+count  total (s)   self (s)
+    2              0.000027   if a:inactive && !has_key(s:highlight, 'inactive')
+                                call lightline#highlight('inactive')
+                              endif
+    2   0.012060   0.000063   return s:line(0, a:inactive)
+
+FUNCTIONS SORTED ON TOTAL TIME
+count  total (s)   self (s)  function
+    4   3.513005   0.076635  colorizer#ColorHighlight()
+ 8762   3.435068   0.525772  <SNR>19_PreviewColorInLine()
+ 8762   1.378110   1.158874  <SNR>19_HexCode()
+ 8762   0.964124   0.743502  <SNR>19_RgbaColor()
+ 8762   0.547794             <SNR>19_RgbColor()
+17524   0.439241             <SNR>19_RgbBgColor()
+    4   0.020232   0.000084  indent_guides#process_autocmds()
+    4   0.020148   0.007888  indent_guides#enable()
+  554   0.019268             <SNR>19_SetMatcher()
+    2   0.012500   0.000381  lightline#update()
+    2   0.012119   0.000122  lightline#statusline()
+    2   0.011997   0.004734  <SNR>50_line()
+    4   0.006171   0.006111  indent_guides#clear_matches()
+    4   0.005021   0.002969  <SNR>50_expand()
+    4   0.004632             <SNR>38_Highlight_Matching_Pair()
+  240   0.004077             indent_guides#indent_highlight_pattern()
+    8   0.002242             <SNR>50_subseparator()
+    4   0.001795   0.000389  <SNR>30_record()
+    4   0.001683   0.001194  indent_guides#init_script_vars()
+    4   0.001406             <SNR>30_addtomrufs()
+
+FUNCTIONS SORTED ON SELF TIME
+count  total (s)   self (s)  function
+ 8762   1.378110   1.158874  <SNR>19_HexCode()
+ 8762   0.964124   0.743502  <SNR>19_RgbaColor()
+ 8762              0.547794  <SNR>19_RgbColor()
+ 8762   3.435068   0.525772  <SNR>19_PreviewColorInLine()
+17524              0.439241  <SNR>19_RgbBgColor()
+    4   3.513005   0.076635  colorizer#ColorHighlight()
+  554              0.019268  <SNR>19_SetMatcher()
+    4   0.020148   0.007888  indent_guides#enable()
+    4   0.006171   0.006111  indent_guides#clear_matches()
+    2   0.011997   0.004734  <SNR>50_line()
+    4              0.004632  <SNR>38_Highlight_Matching_Pair()
+  240              0.004077  indent_guides#indent_highlight_pattern()
+    4   0.005021   0.002969  <SNR>50_expand()
+    8              0.002242  <SNR>50_subseparator()
+    4              0.001406  <SNR>30_addtomrufs()
+    4              0.001302  <SNR>19_ClearMatches()
+   18              0.001226  <SNR>50_convert()
+    4   0.001683   0.001194  indent_guides#init_script_vars()
+    4              0.000826  <SNR>50_flatten_twice()
+    8              0.000617  <SNR>19_Rgba2Rgb()
+

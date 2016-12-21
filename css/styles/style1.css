@@ -1,0 +1,115 @@
+.moduletable_clients h3, div.k2LoginBlock ul li a:hover,.nspLinks ul li h4 a:hover,
+div.k2CategoriesListBlock ul li.activeCategory a,.blog-featured .vt_boxitem ul.info li h3,
+.dropcap,a:link,a:visited,.menu a:hover,#current a,#page .contentheading, div.k2TagCloudBlock a,
+#active_menu,.contentpane_vtem_popup a,a.results, #vt_copyright a:hover, .weblinks a:hover,
+#vt_menu_footer ul li a:hover, #current ul li a:hover, ul.VMmenu li a:hover,
+.mostread li a:hover,.fg-menu li a:hover, .fg-menu li.active a, .fg-menu li.active.parent a,
+.fg-menu li.active.parent li.active.parent a,a.pathway:hover,li.team_last a,
+ul.VMmenu li.VmOpen a,.moduletable a.mainlevel:hover,
+.pagination a, ul li.active a:hover, ul li.active a span:hover, ul .current a span,
+.current ul li a:hover span, .current ul li a span:hover,.categories_list ul li a:hover,
+div.itemTagsBlock ul.itemTags li a:hover, div.k2ItemsBlock ul li a.moduleItemTitle:hover,
+div.userItemTagsBlock ul.userItemTags li a:hover,
+div.itemExtraFields h3, div.catItemExtraFields h4, div.genericItemExtraFields h4,
+.vt_moduletable.NewsTop .nspArt h4.nspHeader a:hover,
+.items-row .item h2 a, .contentheading a, .contentheading a,
+.vt_moduletable.our_tools .nspMain .nspArtPage .nspArt h4.nspHeader a,
+.vt_moduletable.upcoming_events .nspArt p.nspInfo,.nspLinks ul li h4 a,
+#vtem_menu ul.menu_vtem_nav li.current a, #vtem_menu ul.menu_vtem_nav li.active a,
+#vt_footer ul li a:hover,
+.nspArt h4.nspHeader a:hover{color:#2fc7a9; text-decoration:none;}
+
+
+#vtem_menu ul.menu_vtem_nav > li.active > a:hover > span, 
+#vtem_menu ul.menu_vtem_nav > li.current > a:hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a:hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.current > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.current > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span, 
+#vtem_menu ul.menu_vtem_nav > li.current > a > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span, 
+#vtem_menu ul.menu_vtem_nav > li.current > a > span,
+#vtem_menu ul.menu_vtem_nav > li.active > a > span,
+#vtem_menu ul.menu_vtem_nav > li > a.hover > span,
+#vtem_menu ul.menu_vtem_nav > li > a:hover > span{ border-bottom:5px solid #2fc7a9; color:#2fc7a9;}
+
+.vt_wrapper_drawer,
+/*.we_offer ul li a.Readmore,*/
+.vt_wrapper_bottom a,
+.pagination strong span,
+.pagination strong a:hover,
+.vt_moduletable.Newsletter input.submit_mail,
+div.k2ItemsBlock ul li a.moduleItemReadMore,
+.vt_box_head .button_round1 a, .readmore a, .nspArtPage a.readon,
+div.k2LoginBlock fieldset.input input.button, 
+div.button_searchb .form_searchb_submit, 
+a.vt_button, .button_round, #finder-search .button,
+table.calendar tr td.calendarNavMonthPrev, 
+table.calendar tr td.calendarNavMonthNext, 
+table.calendar tr td.calendarCurrentMonth,
+div.vt_aside .catItemDateCreated,
+div.vt_aside .tagItemDateCreated,
+div.vt_aside .userItemDateCreated,
+#k2Container div.subCategory a.subCategoryMore:hover,
+table.calendar tr td.calendarTodayLinked,
+table.calendar tr td.calendarTodayLinked a:hover,
+table.calendar tr td.calendarDateLinked a:hover,
+table.calendar tr td.calendarToday,
+table.calendar tr td.calendarToday:hover,
+#vtem_menu ul.menu_vtem_nav li ul li a.hover,
+#vtem_menu ul.menu_vtem_nav li.active ul li a.hover,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent a,
+#vtem_menu ul.menu_vtem_nav li ul li.current.active a,
+#vtem_menu ul.menu_vtem_nav li ul li ul li.active a,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent ul li a:hover,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent ul li.current.active a,
+#vtem_menu ul.menu_vtem_nav li ul li.active.parent ul li.current.active a span,
+#vtem_menu ul.menu_vtem_nav li.current.active.parent ul li a.hover span,
+#vtem_menu ul.menu_vtem_nav li.current.active.parent ul li a:hover span,
+#vtem_menu ul.menu_vtem_nav ul li.active a.hover,
+#vtem_menu ul.menu_vtem_nav ul li.active ul li a:hover,
+#vtem_menu ul.menu_vtem_nav ul li.active ul li a.hover,
+#vtem_menu ul.menu_vtem_nav ul li.active ul li a.hover:hover span,
+#vtem_menu ul.menu_vtem_nav li.parent ul li.current ul li a:hover,
+#vtem_menu ul.menu_vtem_dropline li.active a span,
+#vtem_menu ul.menu_vtem_dropline li.vtem_hover a span,
+#vtem_menu ul.menu_vtem_dropline li.active a,
+#vtem_menu ul.menu_vtem_dropline li.vtem_hover a{ background-color:#2fc7a9 !important; }
+.we_offer ul li a.Readmore {/*background-color:#ffffff !important;*/ color:#2fc7a9 !important;}
+.we_offer ul li a.Readmore:hover {background-color:#2fc7a9 !important; color:#ffffff !important;}
+
+/*.readmore a{ /*background-*/color:#2fc7a9 !important; }*/
+/*.Readmore a:hover { background-color:#2fc7a9 !important; }*/
+#vtem_menu ul.menu_vtem_dropline li.active ul{background-color:#2fc7a9 !important; display:block !important;}
+
+div.k2ItemsBlock ul li a.moduleItemReadMore,
+.vt_box_head .button_round1 a, .readmore a, .nspArtPage a.readon,
+.we_offer ul li a.Readmore, .vt_wrapper_bottom a{ /*border-bottom*/border: 1px solid #23a087;}
+.we_offer ul li.analyze span{ background:url(ana1.png) 46% center no-repeat;}
+.we_offer ul li.strategy span{ background:url(stra1.png) 46% center no-repeat;}
+.we_offer ul li.integrate span{ background:url(inter1.png) 49% center no-repeat;}
+.we_offer ul li.develop span{ background:url(deve1.png) 50% center no-repeat;}
+.we_offer span > em {border-color: transparent  /*#2fc7a9*/transparent transparent transparent;}
+.we_offer span:hover > em {border-color: /*#2fc7a9  #2fc7a9*/transparent transparent transparent transparent;}
+
+
+.box_skitter .info_slide_dots .image_number_select{ background-position:0 -44px !important;}
+.box_skitter .next_button,.box_skitter .prev_button{border:2px solid #2fc7a9 !important;}
+.box_skitter .prev_button{ background-position:0 -52px !important;}
+.box_skitter .prev_button:hover, .box_skitter .next_button:hover{background-color:#2fc7a9 !important;}
+.box_skitter .next_button{ background-position:-52px -52px !important;}
+
+.vt_wrapper_utility{
+background: #23A087/*215c6e*/; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+}
+
+
+.template-style1 #vt_logo img{ display:none;}
+.template-style1 #vt_logo{background:url(vt_logo_style1.png) left 0 no-repeat;}
+
+
+
