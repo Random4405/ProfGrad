@@ -7,7 +7,7 @@ include_once(JPATH_ROOT . "/templates/" . $this->template . '/vtemtools/default.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 
-<?php 
+<?php
 include_once(JPATH_ROOT."/templates/".$this->template.'/vtemtools/css_var.php');
 ?>
 <body id="vtem" class="<?php echo css_browser_selector().' '.$pageoption.' '.$pageview.' template-'.$TemplateStyle.' logo-'.$logo;?>">
@@ -20,9 +20,12 @@ include_once(JPATH_ROOT."/templates/".$this->template.'/vtemtools/css_var.php');
 
 <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/temp-styles.css" />
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic-ext" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic-ext" rel="stylesheet">
+ -->
 <script type="text/javascript">
 var customizerSettings = {
 language: "en"
@@ -67,15 +70,15 @@ ga('send', 'pageview');
             <jdoc:include type="modules" name="header-menu" style="xhtml" />
           </div>
       </div>
-      <div id="vt_drawer_head" class="vt_drawer_head clearfix">        
+      <div id="vt_drawer_head" class="vt_drawer_head clearfix">
         <?php if ($this->countModules('top1 + top2 + top3 + top4 + top5 + top6 ')) : ?>
           <div class="vt_wrapper_top clearfix">
            <div id="vt_top" class="vt_top clearfix">
                 <?php echo VTEMShowModule('top', 'vt_xhtml', 6);?>
            </div>
-           </div> 
-         <?php endif;?> 
-      </div> 
+           </div>
+         <?php endif;?>
+      </div>
        <!-- /////////////////// MAIN LAYOUT ///////////////////////////////-->
 <div class="main-layout-section">
        <?php if ($this->countModules('sidebar')) : ?>
@@ -91,25 +94,25 @@ ga('send', 'pageview');
 
          <?php if ($this->countModules('showcase1 + showcase2 + showcase3 + showcase4 + showcase5 + showcase6 ')) : ?>
               <div class="vt_wrapper_showcase clearfix">
-              <div class="vt_section clearfix">	
+              <div class="vt_section clearfix">
                  <div id="vt_showcase" class="vt_showcase clearfix">
-                      <?php echo VTEMShowModule('showcase', 'vt_xhtml', 6);?> 
-                      <div class="clr"></div>    
+                      <?php echo VTEMShowModule('showcase', 'vt_xhtml', 6);?>
+                      <div class="clr"></div>
                  </div>
-               </div>  
-               </div> 
-          <?php endif; ?>  
-          <jdoc:include type="modules" name="for-shema-buy" style="xhtml" />                
+               </div>
+               </div>
+          <?php endif; ?>
+          <jdoc:include type="modules" name="for-shema-buy" style="xhtml" />
      <?php if ($this->countModules('feature1 + feature2 + feature3 + feature4 + feature5 + feature6 ')) : ?>
               <div class="vt_wrapper_feature clearfix">
               <div class="vt_section clearfix">
                  <div id="vt_feature" class="vt_feature clearfix">
                       <?php echo VTEMShowModule('feature', 'vt_xhtml', 6);?>
                       <div class="clr"></div>
-                 </div>  
-               </div>  
-              </div>  
-          <?php endif;?> 
+                 </div>
+               </div>
+              </div>
+          <?php endif;?>
 
             <div id="vt_main_inside" class="clearfix">
               <div id="vt_main_contaner" class="clearfix">
@@ -131,15 +134,15 @@ else : // LEFT-BODY_RIGHT ////////////////
 endif;
 if ($_SERVER['REQUEST_URI'] == '/services/krovelnye-raboty'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
   <div class="itemHeader">
     <div class="itemTitle">
     <h1 class="itemTitle">Монтаж кровли под ключ</h1>
-    </div>	  		
-  </div>       	
+    </div>
+  </div>
   <div class="itemBody">
     <div class="itemFullText">
 <p><img src="/images/krov-rab.jpg" border="0" width="350" style="float: right; margin-left: 15px; margin-right: 15px;" alt="финальны1й этап монтажа кровли, укладка битумной черепицы" /></p>
@@ -214,34 +217,34 @@ if ($_SERVER['REQUEST_URI'] == '/services/krovelnye-raboty'):
 <p>Фальцевая кровля имеет маленький вес, это дает возможность монтировать легкую основу. Монтаж фальцевой кровли может осуществляться как на традиционную обрешетку, так и на сплошную основу. Если все же основой является обрешетка, то здесь необходимо учитывать такое расстояние между брусьями, чтобы фальцевая кровля не прогнулась.</p>
 </div>
 
-    <div class="clr"></div>	  
+    <div class="clr"></div>
             <div class="itemContentFooter">
       <div class="clr"></div>
-    </div>	
+    </div>
     <div class="clr"></div>
   </div>
 <div class="clr"></div>
 <div class="clr"></div>
 </div>
 </div>
-</div> 
-</div>  
-</div>    
+</div>
+</div>
+</div>
 </div>
  </div>
 
 ';
 elseif ($_SERVER['REQUEST_URI'] == '/services/krovelnye-raboty/montaj-bitumnoi-cherepicy'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
   <div class="itemHeader">
     <div class="itemTitle">
     <h1 class="itemTitle">Монтаж битумной черепицы</h1>
-    </div>	  		
-  </div>       	
+    </div>
+  </div>
   <div class="itemBody">
     <div class="itemFullText">
     <img src="/images/bitumnaja-cherepitca/iko.jpg" width="800" />
@@ -397,33 +400,33 @@ elseif ($_SERVER['REQUEST_URI'] == '/services/krovelnye-raboty/montaj-bitumnoi-c
 <p>Наклон крыши: 32&deg;</p>
 <p>Площадь кровли: 240м2</p>
 <p>Подсчёт: Наклон кровли 25&deg; - 85&deg; = 3,00м2/в пачке</p>
-<p> 240м2 / 3,00 = 80 пачек плитки</p>  
+<p> 240м2 / 3,00 = 80 пачек плитки</p>
 
 
 
 
 </div>
 
-    <div class="clr"></div>	  
+    <div class="clr"></div>
             <div class="itemContentFooter">
       <div class="clr"></div>
-    </div>	
+    </div>
     <div class="clr"></div>
   </div>
 <div class="clr"></div>
 <div class="clr"></div>
 </div>
 </div>
-</div> 
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+</div>
+ </div>
 ';
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/kompozitnaya-cherepica-metrotile/metrobond'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside">
 
 
@@ -466,12 +469,12 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/kompozitnaya-ch
     <div class="itemFullText">
 <p>Традиционный классический профиль <b>MetroBond</b>, создает эффект натуральной черепичной кровли. Превосходно сочетается с различными архитектурными стилями и замыслами.</p>
 
-<table cellpadding="10" cellspacing="10">	  
+<table cellpadding="10" cellspacing="10">
 <tr>
 <td>
 <img src="/images/metrobond_1.jpg" border="0" width="500" style="float: left; margin-left: 135px; margin-right: 25px;" />
-</td>	
-<td>  
+</td>
+<td>
 <p><b>Технические характеристики:</b></p>
 <ul>
 <li>Длина <b>1330 мм</b></li>
@@ -901,7 +904,7 @@ Magnelis® ZM 300 г/м2
 
 <div><!-- START: Modules Anywhere --><!--  Modules Anywhere Message: The module cannot be placed because it is not published or assigned to this page. --><!-- END: Modules Anywhere --></div>	  </div>
 
-    <div class="clr"></div> 	
+    <div class="clr"></div>
 
     <div class="clr"></div>
   </div>
@@ -916,17 +919,17 @@ Magnelis® ZM 300 г/м2
 <!-- End K2 Item Layout -->
  </div>
                                     </div>
-</div>  
-
-</div>  
-</div>    
 </div>
- </div>        
+
+</div>
+</div>
+</div>
+ </div>
 ';
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/creaton-titania'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466405141779_49">
 
 
@@ -1263,15 +1266,15 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/creaton-titania
 <!-- End K2 Item Layout -->
  </div>
                                     </div>                                  </div>
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+ </div>
 ';
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/prirodny-slanec-rathscheck'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466147714242_49">
 
 
@@ -1358,10 +1361,10 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/prirodny-slanec
 <!-- End K2 Item Layout -->
  </div>
                                     </div>
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+ </div>
 ';
 
 
@@ -1372,7 +1375,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/prirodny-slanec
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/bruschatka/feldhaus-klinker'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466148501148_49">
 
 
@@ -1397,7 +1400,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/bruschatka/feldhaus-klinker'):
     <div class="itemTitle" id="yui_3_13_0_1_1466148501148_47">
     <h1 class="itemTitle" id="yui_3_13_0_1_1466148501148_46">
 
-      Клинкерная брусчатка FELDHAUS KLINKER	  	
+      Клинкерная брусчатка FELDHAUS KLINKER
 
 
 
@@ -1676,10 +1679,10 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/bruschatka/feldhaus-klinker'):
 <!-- End K2 Item Layout -->
  </div>
                                     </div>
-                  </div>  
-</div>    
+                  </div>
 </div>
- </div>        
+</div>
+ </div>
 ';
 
 
@@ -1694,7 +1697,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/bruschatka/feldhaus-klinker'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/feldhaus-klinker'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
@@ -2367,34 +2370,34 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/feldhaus-klinker
 
 <h2>Актуальные цены на фасадную клинкерную плитку уточняйте у наших менеджеров</h2>
 
-    <div class="clr"></div>	  
+    <div class="clr"></div>
             <div class="itemContentFooter">
       <div class="clr"></div>
-    </div>	
+    </div>
     <div class="clr"></div>
   </div>
 <div class="clr"></div>
 <div class="clr"></div>
 </div>
 </div>
-</div> 
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+</div>
+ </div>
 ';
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
   <div class="itemHeader">
     <div class="itemTitle">
     <h1 class="itemTitle">Мансардные окна Velux (Велюкс)</h1>
-    </div>	  		
-  </div>       	
+    </div>
+  </div>
   <div class="itemBody">
     <div class="itemFullText">
 
@@ -2799,26 +2802,26 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux'):
 <tr><td>
 
 <p>У нас разработана отличная система скидок для покупателей кровельных материалов, поэтому мы можем предложить выгодные цены на мансардные окна Velux. А все аксессуары Вы также можете приобрести вместе с окном. </p>
-<p>В купить мансардные окна Велюкс в Минске можно в компании «Профгад». На ул. Мележа,5 в красивом новом шоуруме Вы можете получить консультацию, узнать какие модели подходят Вашему дому и посмотреть образцы.</p>	
+<p>В купить мансардные окна Велюкс в Минске можно в компании «Профгад». На ул. Мележа,5 в красивом новом шоуруме Вы можете получить консультацию, узнать какие модели подходят Вашему дому и посмотреть образцы.</p>
 </td></tr>
-</table>  	
+</table>
 </div>
 
-    <div class="clr"></div>	  
+    <div class="clr"></div>
             <div class="itemContentFooter">
       <div class="clr"></div>
-    </div>	
+    </div>
     <div class="clr"></div>
   </div>
 <div class="clr"></div>
 <div class="clr"></div>
 </div>
 </div>
-</div> 
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+</div>
+ </div>
 
 
 ';
@@ -2831,7 +2834,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/kompozitnaya-cherepica-metrotile'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
@@ -2935,7 +2938,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/kompozitnaya-ch
 <p>Metrotile дает гарантию на свою кровлю от 50 лет!</p>
 
 
-<div> 
+<div>
 <table border="0" cellspacing="3" cellpadding="3">
 <tbody>
 <tr>
@@ -3035,7 +3038,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/kompozitnaya-ch
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/cherdachnye-lestnicy'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466148855218_49">
 
 
@@ -3060,7 +3063,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/cherdachnye-lestnicy'):
     <div class="itemTitle" id="yui_3_13_0_1_1466148855218_52">
     <h1 class="itemTitle" id="yui_3_13_0_1_1466148855218_51">
 
-      Чердачные лестницы	  	
+      Чердачные лестницы
 
 
 
@@ -3480,7 +3483,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/cherdachnye-lestnicy'):
 <!-- End K2 Item Layout -->
  </div>
                                     </div></div>
- </div>        
+ </div>
 ';
 
 
@@ -3491,7 +3494,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/cherdachnye-lestnicy'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/smesi-sopro/sopro-s-no-1-400'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466154323185_49">
 
 
@@ -3516,7 +3519,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/smesi-sopro/sopr
     <div class="itemTitle" id="yui_3_13_0_1_1466154323185_47">
     <h1 class="itemTitle" id="yui_3_13_0_1_1466154323185_46">
 
-      Высокоэластичный клеевой раствор	  	
+      Высокоэластичный клеевой раствор
 
 
 
@@ -3641,12 +3644,12 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/smesi-sopro/sopr
 </div>
 <!-- End K2 Item Layout -->
  </div>
-                                    </div> </div>        
+                                    </div> </div>
 ';
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux/glr-3073'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466154614334_49">
 
 
@@ -3671,7 +3674,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux/glr-3073'):
     <div class="itemTitle" id="yui_3_13_0_1_1466154614334_47">
     <h1 class="itemTitle" id="yui_3_13_0_1_1466154614334_46">
 
-      GLR 3073 Ручка сверху	  	
+      GLR 3073 Ручка сверху
 
 
 
@@ -3781,7 +3784,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux/glr-3073'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/meyer-holsen'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
                                          <div class="vt_component_inside" id="yui_3_13_0_1_1466150625459_50">
 
 
@@ -3806,7 +3809,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/meyer-holsen'):
     <div class="itemTitle" id="yui_3_13_0_1_1466150625459_54">
     <h1 class="itemTitle">
 
-      Керамическая черепица MEYER HOLSEN	  	
+      Керамическая черепица MEYER HOLSEN
 
 
 
@@ -3971,9 +3974,9 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/meyer-holsen'):
 </div>
 <!-- End K2 Item Layout -->
  </div>
-                                    </div></div>    
+                                    </div></div>
 </div>
- </div>        
+ </div>
 ';
 
 
@@ -3982,7 +3985,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/meyer-holsen'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/imerys'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
@@ -4109,7 +4112,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/imerys'):
 </td>
 </tr>
 </tbody>
-</table>	
+</table>
 
 <h2>Цены на керамическую черепицу Imerys уточняйте по телефонам, указанным на сайте.</h2>
 </div>
@@ -4151,7 +4154,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/imerys'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/vandersanden'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
@@ -4222,7 +4225,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/fasadnye-materialy/vandersanden'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/faltsevaia-krovlia'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66">
 <div id="k2Container" class="itemView">
@@ -4304,7 +4307,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/faltsevaia-krov
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66">
 <div id="k2Container" class="itemView">
@@ -4378,7 +4381,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy'):
 <td valign="top"> </td>
 </tr>
 <tr>
-<td><b><a href="/k2-items/imerys">Керамическая черепица Imerys</a></b><br />Керамическая черепица IMERYS производства Франции – является одним из мировых лидеров качества в своей отрасли. 
+<td><b><a href="/k2-items/imerys">Керамическая черепица Imerys</a></b><br />Керамическая черепица IMERYS производства Франции – является одним из мировых лидеров качества в своей отрасли.
 <p> </p>
 <div style="float: left; width: 280px; display: block;">
 <ul>
@@ -4459,7 +4462,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy'):
 <td valign="top"> </td>
 </tr>
 </tbody>
-</table>	
+</table>
 
 
 <p>В прежние времена у дачников, которые ремонтировали крыши своих домов, очень большой популярностью пользовался рубероид. Это не очень надежный, но исключительно дешевый материал, который производят из эпоксидных смол и нефтепродуктов. Сегодня при ремонте крыш рубероид практически не используют &ndash; на рынке появилось много других качественных и доступных по цене материалов.</p>
@@ -4538,7 +4541,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/services/fasadnye-raboty'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
@@ -4587,7 +4590,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/services/fasadnye-raboty'):
 
 
 <p>В нашей компании работают только профессионалы своего дела! Сотрудники постоянно повышают квалификацию и осваивают самые современные методы, которые появляются на международном строительном рынке. Мы имеем значительный опыт фасадных работ по всей стране!</p>
-<p>Мы ценим и уважаем каждого клиента и подходим к делу с полной ответственностью. Даем гарантии на произведенные фасадные работы и предлагаем оптимальные расценки. Компания «ПрофГрад» - ваш надежный партнер! Обращайтесь к нам в любое время!</p>	
+<p>Мы ценим и уважаем каждого клиента и подходим к делу с полной ответственностью. Даем гарантии на произведенные фасадные работы и предлагаем оптимальные расценки. Компания «ПрофГрад» - ваш надежный партнер! Обращайтесь к нам в любое время!</p>
  <h2>Цены на фасадные работы в Минске уточняйте по телефонам, указанным на сайте.</h2>
 
 
@@ -4631,7 +4634,7 @@ elseif ($_SERVER['REQUEST_URI'] == '/services/fasadnye-raboty'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/krovlia-iko'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
@@ -4752,10 +4755,10 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/krovlia-iko'):
 </ul>
 </td>
 </tr>
-</table>	
+</table>
 
 
-  <!--  
+  <!--
       <table rules="none">
 <tbody>
 <tr>
@@ -4888,15 +4891,15 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/krovelnye-materialy/krovlia-iko'):
 
 elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
   <div class="itemHeader">
     <div class="itemTitle">
     <h1 class="itemTitle">Мансардные окна Velux (Велюкс)</h1>
-    </div>	  		
-  </div>       	
+    </div>
+  </div>
   <div class="itemBody">
     <div class="itemFullText">
     <p><img src="/images/okna-velux.jpg" border="0" width="350" style="float: left; margin-left: 15px; margin-right: 15px;" alt="окна Велюкс после установки, большое мансардное окно на чердаке"></p>
@@ -5296,40 +5299,40 @@ elseif ($_SERVER['REQUEST_URI'] == '/catalog/mansardnye-okna-velux'):
 </tr>
 <tr><td>
 <p>У нас разработана отличная система скидок для покупателей кровельных материалов, поэтому мы можем предложить выгодные цены на мансардные окна Velux. А все аксессуары Вы также можете приобрести вместе с окном. </p>
-<p>В купить мансардные окна Велюкс в Минске можно в компании «Профгад». На ул. Мележа,5 в красивом новом шоуруме Вы можете получить консультацию, узнать какие модели подходят Вашему дому и посмотреть образцы.</p>	
+<p>В купить мансардные окна Велюкс в Минске можно в компании «Профгад». На ул. Мележа,5 в красивом новом шоуруме Вы можете получить консультацию, узнать какие модели подходят Вашему дому и посмотреть образцы.</p>
 </td></tr>
-</table>  	
+</table>
 </div>
 
-    <div class="clr"></div>	  
+    <div class="clr"></div>
             <div class="itemContentFooter">
       <div class="clr"></div>
-    </div>	
+    </div>
     <div class="clr"></div>
   </div>
 <div class="clr"></div>
 <div class="clr"></div>
 </div>
 </div>
-</div> 
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+</div>
+ </div>
 
 
 ';
 elseif ($_SERVER['REQUEST_URI'] == '/services/krovelnye-raboty/montaj-metallocherepicy'):
   echo '
-<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft"> 
+<div id="vt_main_com" class="vt_auto_cols contentwidthl floatleft">
 <div class="vt_component_inside">
 <span id="startOfPageId66"></span>
 <div id="k2Container" class="itemView">
   <div class="itemHeader">
     <div class="itemTitle">
     <h1 class="itemTitle">Монтаж металлочерепицы</h1>
-    </div>	  		
-  </div>       	
+    </div>
+  </div>
   <div class="itemBody">
     <div class="itemFullText">
 <h3>Технология монтажа кровли из металлочерепицы</h3>
@@ -5371,25 +5374,25 @@ elseif ($_SERVER['REQUEST_URI'] == '/services/krovelnye-raboty/montaj-metalloche
 <p style="text-align: center;"><img height="444" src="/images/montag-cherepitcy/019.jpg" width="640" /></p>
 </div>
 
-    <div class="clr"></div>	  
+    <div class="clr"></div>
             <div class="itemContentFooter">
       <div class="clr"></div>
-    </div>	
+    </div>
     <div class="clr"></div>
   </div>
 <div class="clr"></div>
 <div class="clr"></div>
 </div>
 </div>
-</div> 
-</div>  
-</div>    
 </div>
- </div>        
+</div>
+</div>
+</div>
+ </div>
 ';
 
 else :
-  echo '<div id="vt_main_com" class="vt_auto_cols '.$contentwidth.' '.$bodyfloat.'"> 
+  echo '<div id="vt_main_com" class="vt_auto_cols '.$contentwidth.' '.$bodyfloat.'">
   <div class="vt_component_inside">';
 if($SystemMessages == 1) :
 
@@ -5447,17 +5450,17 @@ endif;
 // END LEFT-BODY_RIGHT ///////////////////////////
 endif; ?>
          </div>
-         </div>    
+         </div>
         <?php if ($this->countModules('utility1 + utility2 + utility3 + utility4 + utility5 + utility6 ')) : ?>
            <div class="vt_wrapper_utility clearfix">
-           <div class="vt_section clearfix"> 
+           <div class="vt_section clearfix">
              <div id="vt_utility" class="vt_utility clearfix">
                     <?php echo VTEMShowModule('utility', 'vt_xhtml', 6);?>
                     <div class="clr"></div>
-            </div> 
             </div>
-           </div>  
-        <?php endif; ?> 
+            </div>
+           </div>
+        <?php endif; ?>
 
         <jdoc:include type="modules" name="adaptive-buttons" style="xhtml" />
         <?php if ($this->countModules('bottom1 + bottom2 + bottom3 + bottom4 + bottom5 + bottom6 ')) : ?>
@@ -5467,22 +5470,22 @@ endif; ?>
                       <?php echo VTEMShowModule('bottom', 'vt_xhtml', 6);?>
                       <div class="clr"></div>
              </div>
-            </div>   
-           </div>  
-        <?php endif; ?>  
+            </div>
+           </div>
+        <?php endif; ?>
      </div>
-    </div>             
+    </div>
 </div>
-      <!-- /////////////////// FOOTER LAYOUT ///////////////////////////-->  
+      <!-- /////////////////// FOOTER LAYOUT ///////////////////////////-->
 
-  <div id="vt_footer_section" class="vt_footer_section clearfix"> 
+  <div id="vt_footer_section" class="vt_footer_section clearfix">
       <div class="vt_section clearfix">
-        <div id="vt_wapper_footer"> 
+        <div id="vt_wapper_footer">
            <?php if ($this->countModules('footer1 + footer2 + footer3 + footer4 + footer5 + footer6 ')) : ?>
                  <div id="vt_footer" class="vt_footer clearfix">
                         <?php echo VTEMShowModule('footer', 'vt_xhtml', 6);?>
                         <div class="clr"></div>
-                </div> 
+                </div>
            <?php endif; ?>
 
            <div class="wapper_copyright_gotop clearfix">
@@ -5495,15 +5498,15 @@ endif; ?>
                  </div>
            <?php endif; ?>
            <div class="clr"></div>
-            <?php echo $vtcopyright;?> 
+            <?php echo $vtcopyright;?>
 
            </div>
-       </div> 
-     </div>       
+       </div>
+     </div>
   </div>
-   </div>     
-  </div>	   
-</div>  
+   </div>
+  </div>
+</div>
             <jdoc:include type="modules" name="bottom_menu" style="xhtml" />
 <?php include_once(JPATH_ROOT . "/templates/" . $this->template . '/vtemtools/debug.php');?>
 
